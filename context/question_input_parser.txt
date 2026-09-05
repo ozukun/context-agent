@@ -1,0 +1,289 @@
+questions = [
+
+    # =========================================================
+    # 1. BASIC / BASELINE
+    # =========================================================
+    "Gold",
+    "Gold prices",
+    "What is happening with gold?",
+    "What is happening with gold now?",
+    "Give me a summary of gold",
+    "What is the current situation in gold?",
+
+    # =========================================================
+    # 2. HISTORICAL / TREND
+    # =========================================================
+    "Gold prices last 3 years",
+    "Gold trend last year",
+    "What happened to gold over the last 6 months?",
+    "How has gold performed in the past quarter?",
+    "Bitcoin prices last 2 years",
+    "Nvidia trend over the last 3 months",
+    "Oil prices last quarter",
+    "Interest rates over the previous year",
+
+    # =========================================================
+    # 3. FUTURE / OUTLOOK
+    # =========================================================
+    "Gold 3 year outlook",
+    "Gold outlook for next year",
+    "Where could gold be in 6 months?",
+    "Bitcoin outlook next 2 years",
+    "Nvidia outlook for the next quarter",
+    "Oil outlook for next year",
+    "Where are interest rates heading?",
+    "What is the future of gold?",
+
+    # =========================================================
+    # 4. PAST + FUTURE IN SAME QUESTION
+    # =========================================================
+    "Based on the last 6 months, what is gold outlook for next year?",
+    "Using the last 2 years of data, what is Bitcoin outlook for the next 12 months?",
+    "Based on Nvidia's performance last year, what is the outlook for next quarter?",
+    "Given oil developments over the last 3 months, what could happen next year?",
+    "Based on recent interest rate trends, where could rates be next year?",
+
+    # =========================================================
+    # 5. RISKS
+    # =========================================================
+    "What are the main risks for gold?",
+    "Gold risks next year",
+    "What could push gold prices down?",
+    "What are the downside risks for Bitcoin?",
+    "What are Nvidia's biggest risks?",
+    "What could go wrong for Nvidia next year?",
+    "What are the risks for oil prices?",
+    "What are the risks of higher interest rates?",
+
+    # =========================================================
+    # 6. OPPORTUNITY / UPSIDE
+    # =========================================================
+    "What are the opportunities for gold?",
+    "What could push gold higher?",
+    "What is the upside case for Bitcoin?",
+    "What could drive Nvidia higher?",
+    "What are the bullish catalysts for oil?",
+    "What could cause interest rates to fall?",
+
+    # =========================================================
+    # 7. DRIVERS
+    # =========================================================
+    "What is driving gold prices?",
+    "What are the main drivers of Bitcoin?",
+    "What is driving Nvidia stock?",
+    "What determines oil prices?",
+    "What is driving interest rates?",
+    "Why is gold moving?",
+    "Why is Bitcoin going up?",
+
+    # =========================================================
+    # 8. SENTIMENT
+    # =========================================================
+    "What is the sentiment around gold?",
+    "Gold market sentiment right now",
+    "Is sentiment bullish or bearish for Bitcoin?",
+    "What is investor sentiment around Nvidia?",
+    "What is market sentiment for oil?",
+
+    # =========================================================
+    # 9. IMPACT / CAUSAL QUESTIONS
+    # =========================================================
+    "How would higher interest rates affect gold?",
+    "How would lower interest rates affect gold?",
+    "How does inflation affect gold?",
+    "How does a stronger dollar affect gold?",
+    "How would ETF inflows affect Bitcoin?",
+    "How would regulation affect Bitcoin?",
+    "How would lower rates affect Nvidia?",
+    "How would weaker AI demand affect Nvidia?",
+    "How would China demand affect oil?",
+    "How would a recession affect oil prices?",
+
+    # =========================================================
+    # 10. MULTIPLE FOCUS FACTORS
+    # =========================================================
+    "How do interest rates and inflation affect gold?",
+    "How would higher rates and a stronger dollar affect gold?",
+    "How do ETF flows and regulation affect Bitcoin?",
+    "How do AI demand and export controls affect Nvidia?",
+    "How do OPEC supply and China demand affect oil?",
+    "How do inflation and labor markets affect interest rates?",
+
+    # =========================================================
+    # 11. SCENARIOS / WHAT-IF
+    # =========================================================
+    "What happens to gold if the Fed cuts rates?",
+    "What happens to gold if inflation rises and rates fall?",
+    "What if the dollar weakens sharply?",
+    "What happens to Bitcoin if institutional adoption accelerates?",
+    "What if Bitcoin ETF flows turn negative?",
+    "What happens to Nvidia if AI spending slows?",
+    "What if Nvidia margins fall next year?",
+    "What happens to oil if OPEC cuts production?",
+    "What if China enters a recession?",
+    "What happens to interest rates if inflation stays high?",
+
+    # =========================================================
+    # 12. COMPARISON
+    # =========================================================
+    "Gold vs Bitcoin",
+    "Gold vs Bitcoin risk",
+    "Gold or Bitcoin for the next 3 years?",
+    "Compare gold and Bitcoin sentiment",
+    "Compare Nvidia and Bitcoin performance",
+    "Oil vs gold outlook",
+    "Which has more upside, gold or Bitcoin?",
+    "Which is riskier, Nvidia or Bitcoin?",
+
+    # =========================================================
+    # 13. VALUATION / FUNDAMENTALS
+    # =========================================================
+    "Is Nvidia expensive?",
+    "What is Nvidia's valuation?",
+    "How strong are Nvidia fundamentals?",
+    "Is Nvidia overvalued?",
+    "What are Nvidia's earnings risks?",
+    "What does Nvidia revenue growth look like?",
+
+    # =========================================================
+    # 14. IMPLICIT INTENT
+    # =========================================================
+    "Why gold?",
+    "Why Bitcoin?",
+    "Gold bullish?",
+    "Bitcoin bearish?",
+    "Nvidia expensive?",
+    "Oil going higher?",
+    "Rates going down?",
+    "Gold safe haven?",
+
+    # =========================================================
+    # 15. CURRENT VS FUTURE SEMANTIC EDGE CASES
+    # =========================================================
+    "Gold outlook",
+    "Gold current outlook",
+    "Gold today",
+    "Gold right now",
+    "Gold next",
+    "Gold going forward",
+    "Gold near term outlook",
+    "Gold long term outlook",
+
+    # =========================================================
+    # 16. TIME AMBIGUITY
+    # =========================================================
+    "Gold 3 years",
+    "Gold last 3 years outlook",
+    "Gold outlook based on last 3 years",
+    "Gold next 18 months",
+    "Gold this year",
+    "Gold this quarter",
+    "Gold year to date",
+    "Gold since 2024",
+    "Gold between 2024 and 2026",
+    "Gold in 2025",
+    "Gold short term",
+    "Gold medium term",
+    "Gold long term",
+
+    # =========================================================
+    # 17. SYNONYMS / ALIASES
+    # =========================================================
+    "BTC outlook",
+    "BTC risks",
+    "NVDA outlook",
+    "NVDA valuation",
+    "crude oil outlook",
+    "crude prices last quarter",
+    "Fed rates next year",
+    "rate cuts impact on gold",
+    "yellow metal outlook",
+
+    # =========================================================
+    # 18. CASE / TYPO / NOISY INPUT
+    # =========================================================
+    "GOLD PRICES LAST 3 YEARS",
+    "gold pricez last 3 years",
+    "bitcion outlook next year",
+    "nvida risks",
+    "OIL??? next year",
+    "gold   outlook   3 years",
+    "gold price???",
+    "btc bullish???",
+
+    # =========================================================
+    # 19. TURKISH / MIXED LANGUAGE
+    # =========================================================
+    "Altının son 3 yıllık trendi nedir?",
+    "Gold önümüzdeki 3 yıl ne olur?",
+    "Bitcoin için en büyük riskler neler?",
+    "Nvidia gelecek yıl outlook nasıl?",
+    "Faizler düşerse gold nasıl etkilenir?",
+    "Oil fiyatlarını ne etkiliyor?",
+    "Gold ve Bitcoin karşılaştır",
+
+    # =========================================================
+    # 20. NEGATION / CORRECTION
+    # =========================================================
+    "I don't want a forecast, just tell me what is happening with gold now",
+    "Don't compare gold with Bitcoin, just analyze gold",
+    "Not the past, I want gold outlook for next year",
+    "Not next year, show me gold over the last year",
+
+    # =========================================================
+    # 21. MULTI-INTENT QUESTIONS
+    # =========================================================
+    "What are the risks and opportunities for gold?",
+    "Give me gold trend and outlook",
+    "What is driving gold and what are the risks?",
+    "Analyze Bitcoin sentiment, risks and outlook",
+    "Nvidia valuation and future outlook",
+    "Oil risks and opportunities next year",
+
+    # =========================================================
+    # 22. MULTIPLE TIME WINDOWS
+    # =========================================================
+    "Compare gold now with 3 years ago",
+    "How did gold perform last year and what is the outlook for next year?",
+    "Bitcoin last 6 months versus next 6 months",
+    "What changed in Nvidia over the last quarter and what happens next quarter?",
+
+    # =========================================================
+    # 23. USER-SPECIFIED ANALYSIS FACTORS
+    # =========================================================
+    "Gold outlook considering real rates",
+    "Gold outlook considering inflation and central bank demand",
+    "Bitcoin outlook based on ETF flows",
+    "Nvidia outlook based on AI demand and margins",
+    "Oil outlook based on OPEC and inventories",
+    "Interest rate outlook based on inflation and employment",
+
+    # =========================================================
+    # 24. UNSUPPORTED / SHOULD EXPOSE WEAKNESS
+    # =========================================================
+    "Tesla outlook next year",
+    "Apple stock risks",
+    "Ethereum outlook",
+    "Silver prices last 3 years",
+    "S&P 500 outlook",
+    "EUR USD outlook",
+
+    # =========================================================
+    # 25. NO ASSET / INCOMPLETE QUESTION
+    # =========================================================
+    "What is the outlook?",
+    "What are the risks?",
+    "What happened last year?",
+    "Is it bullish?",
+    "Should I worry?",
+    "What happens next?",
+
+    # =========================================================
+    # 26. COMPLEX NATURAL LANGUAGE
+    # =========================================================
+    "Considering persistent inflation, elevated geopolitical risk and possible Fed cuts, what is the 2 year outlook for gold?",
+    "Based on ETF flows over the last six months and expected regulation changes, what is Bitcoin's outlook for the next year?",
+    "Given slowing AI capex, export restrictions and current valuation, what are the main risks to Nvidia over the next 12 months?",
+    "If OPEC reduces supply while Chinese demand improves, what could happen to oil prices over the next 6 months?",
+    "If inflation remains above target but economic growth weakens, what is the likely direction of interest rates next year?"
+]

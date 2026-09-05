@@ -1,0 +1,6277 @@
+================================================================================
+CONTEXT PARSER TEST RESULTS
+================================================================================
+
+TOTAL TESTS   : 183
+SUCCESS       : 183
+ERROR         : 0
+
+================================================================================
+TEST 1
+================================================================================
+
+QUESTION:
+Gold
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "status",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 2
+================================================================================
+
+QUESTION:
+Gold prices
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "status",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 3
+================================================================================
+
+QUESTION:
+What is happening with gold?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "status",
+  "time": [
+    {
+      "role": "target",
+      "direction": "current"
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 4
+================================================================================
+
+QUESTION:
+What is happening with gold now?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "status",
+  "time": [
+    {
+      "role": "target",
+      "direction": "current"
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 5
+================================================================================
+
+QUESTION:
+Give me a summary of gold
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "summary",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 6
+================================================================================
+
+QUESTION:
+What is the current situation in gold?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "status",
+  "time": [
+    {
+      "role": "target",
+      "direction": "current"
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 7
+================================================================================
+
+QUESTION:
+Gold prices last 3 years
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "trend",
+  "time": [
+    {
+      "role": "evidence",
+      "direction": "past",
+      "unit": "year",
+      "value": 3
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 8
+================================================================================
+
+QUESTION:
+Gold trend last year
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "trend",
+  "time": [
+    {
+      "role": "evidence",
+      "direction": "past",
+      "unit": "year",
+      "value": 1
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 9
+================================================================================
+
+QUESTION:
+What happened to gold over the last 6 months?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "trend",
+  "time": [
+    {
+      "role": "evidence",
+      "direction": "past",
+      "unit": "month",
+      "value": 6
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 10
+================================================================================
+
+QUESTION:
+How has gold performed in the past quarter?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "trend",
+  "time": [
+    {
+      "role": "evidence",
+      "direction": "past",
+      "unit": "quarter",
+      "value": 1
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 11
+================================================================================
+
+QUESTION:
+Bitcoin prices last 2 years
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "bitcoin",
+  "asset_type": "crypto",
+  "intent": "trend",
+  "time": [
+    {
+      "role": "evidence",
+      "direction": "past",
+      "unit": "year",
+      "value": 2
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "institutional_adoption",
+    "etf_flows",
+    "liquidity",
+    "regulation",
+    "network_activity",
+    "macro_conditions",
+    "volatility",
+    "market_sentiment"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 12
+================================================================================
+
+QUESTION:
+Nvidia trend over the last 3 months
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "nvidia",
+  "asset_type": "equity",
+  "intent": "trend",
+  "time": [
+    {
+      "role": "evidence",
+      "direction": "past",
+      "unit": "month",
+      "value": 3
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "ai_demand",
+    "revenue_growth",
+    "earnings",
+    "margins",
+    "valuation",
+    "hyperscaler_capex",
+    "competition",
+    "export_controls",
+    "software_ecosystem"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 13
+================================================================================
+
+QUESTION:
+Oil prices last quarter
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "oil",
+  "asset_type": "commodity",
+  "intent": "status",
+  "time": [
+    {
+      "role": "evidence",
+      "direction": "past",
+      "unit": "quarter",
+      "value": 1
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "supply",
+    "demand",
+    "opec",
+    "inventories",
+    "spare_capacity",
+    "geopolitics",
+    "shipping",
+    "refining"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 14
+================================================================================
+
+QUESTION:
+Interest rates over the previous year
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "interest_rates",
+  "asset_type": "macro",
+  "intent": "trend",
+  "time": [
+    {
+      "role": "evidence",
+      "direction": "past",
+      "unit": "year",
+      "value": 1
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "inflation",
+    "labor_market",
+    "economic_growth",
+    "fed_policy",
+    "yield_curve",
+    "liquidity",
+    "credit_conditions",
+    "housing"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 15
+================================================================================
+
+QUESTION:
+Gold 3 year outlook
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "outlook",
+  "time": [
+    {
+      "role": "target",
+      "direction": "future",
+      "unit": "year",
+      "value": 3
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 16
+================================================================================
+
+QUESTION:
+Gold outlook for next year
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "outlook",
+  "time": [
+    {
+      "role": "target",
+      "direction": "future",
+      "unit": "year",
+      "value": 1
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 17
+================================================================================
+
+QUESTION:
+Where could gold be in 6 months?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "outlook",
+  "time": [
+    {
+      "role": "target",
+      "direction": "future",
+      "unit": "month",
+      "value": 6
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 18
+================================================================================
+
+QUESTION:
+Bitcoin outlook next 2 years
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "bitcoin",
+  "asset_type": "crypto",
+  "intent": "outlook",
+  "time": [
+    {
+      "role": "target",
+      "direction": "future",
+      "unit": "year",
+      "value": 2
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "institutional_adoption",
+    "etf_flows",
+    "liquidity",
+    "regulation",
+    "network_activity",
+    "macro_conditions",
+    "volatility",
+    "market_sentiment"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 19
+================================================================================
+
+QUESTION:
+Nvidia outlook for the next quarter
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "nvidia",
+  "asset_type": "equity",
+  "intent": "outlook",
+  "time": [
+    {
+      "role": "target",
+      "direction": "future",
+      "unit": "quarter",
+      "value": 1
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "ai_demand",
+    "revenue_growth",
+    "earnings",
+    "margins",
+    "valuation",
+    "hyperscaler_capex",
+    "competition",
+    "export_controls",
+    "software_ecosystem"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 20
+================================================================================
+
+QUESTION:
+Oil outlook for next year
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "oil",
+  "asset_type": "commodity",
+  "intent": "outlook",
+  "time": [
+    {
+      "role": "target",
+      "direction": "future",
+      "unit": "year",
+      "value": 1
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "supply",
+    "demand",
+    "opec",
+    "inventories",
+    "spare_capacity",
+    "geopolitics",
+    "shipping",
+    "refining"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 21
+================================================================================
+
+QUESTION:
+Where are interest rates heading?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "interest_rates",
+  "asset_type": "macro",
+  "intent": "outlook",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "inflation",
+    "labor_market",
+    "economic_growth",
+    "fed_policy",
+    "yield_curve",
+    "liquidity",
+    "credit_conditions",
+    "housing"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 22
+================================================================================
+
+QUESTION:
+What is the future of gold?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "outlook",
+  "time": [
+    {
+      "role": "target",
+      "direction": "future"
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 23
+================================================================================
+
+QUESTION:
+Based on the last 6 months, what is gold outlook for next year?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "outlook",
+  "time": [
+    {
+      "role": "evidence",
+      "direction": "past",
+      "unit": "month",
+      "value": 6
+    },
+    {
+      "role": "target",
+      "direction": "future",
+      "unit": "year",
+      "value": 1
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 24
+================================================================================
+
+QUESTION:
+Using the last 2 years of data, what is Bitcoin outlook for the next 12 months?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "bitcoin",
+  "asset_type": "crypto",
+  "intent": "outlook",
+  "time": [
+    {
+      "role": "evidence",
+      "direction": "past",
+      "unit": "year",
+      "value": 2
+    },
+    {
+      "role": "target",
+      "direction": "future",
+      "unit": "month",
+      "value": 12
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "institutional_adoption",
+    "etf_flows",
+    "liquidity",
+    "regulation",
+    "network_activity",
+    "macro_conditions",
+    "volatility",
+    "market_sentiment"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 25
+================================================================================
+
+QUESTION:
+Based on Nvidia's performance last year, what is the outlook for next quarter?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "nvidia",
+  "asset_type": "equity",
+  "intent": "outlook",
+  "time": [
+    {
+      "role": "evidence",
+      "direction": "past",
+      "unit": "year",
+      "value": 1
+    },
+    {
+      "role": "target",
+      "direction": "future",
+      "unit": "quarter",
+      "value": 1
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "ai_demand",
+    "revenue_growth",
+    "earnings",
+    "margins",
+    "valuation",
+    "hyperscaler_capex",
+    "competition",
+    "export_controls",
+    "software_ecosystem"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 26
+================================================================================
+
+QUESTION:
+Given oil developments over the last 3 months, what could happen next year?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "oil",
+  "asset_type": "commodity",
+  "intent": "outlook",
+  "time": [
+    {
+      "role": "evidence",
+      "direction": "past",
+      "unit": "month",
+      "value": 3
+    },
+    {
+      "role": "target",
+      "direction": "future",
+      "unit": "year",
+      "value": 1
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "supply",
+    "demand",
+    "opec",
+    "inventories",
+    "spare_capacity",
+    "geopolitics",
+    "shipping",
+    "refining"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 27
+================================================================================
+
+QUESTION:
+Based on recent interest rate trends, where could rates be next year?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "interest_rates",
+  "asset_type": "macro",
+  "intent": "outlook",
+  "time": [
+    {
+      "role": "evidence",
+      "direction": "past"
+    },
+    {
+      "role": "target",
+      "direction": "future",
+      "unit": "year",
+      "value": 1
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "inflation",
+    "labor_market",
+    "economic_growth",
+    "fed_policy",
+    "yield_curve",
+    "liquidity",
+    "credit_conditions",
+    "housing"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 28
+================================================================================
+
+QUESTION:
+What are the main risks for gold?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "risk",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 29
+================================================================================
+
+QUESTION:
+Gold risks next year
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "risk",
+  "time": [
+    {
+      "role": "target",
+      "direction": "future",
+      "unit": "year",
+      "value": 1
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 30
+================================================================================
+
+QUESTION:
+What could push gold prices down?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "risk",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 31
+================================================================================
+
+QUESTION:
+What are the downside risks for Bitcoin?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "bitcoin",
+  "asset_type": "crypto",
+  "intent": "risk",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "institutional_adoption",
+    "etf_flows",
+    "liquidity",
+    "regulation",
+    "network_activity",
+    "macro_conditions",
+    "volatility",
+    "market_sentiment"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 32
+================================================================================
+
+QUESTION:
+What are Nvidia's biggest risks?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "nvidia",
+  "asset_type": "equity",
+  "intent": "risk",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "ai_demand",
+    "revenue_growth",
+    "earnings",
+    "margins",
+    "valuation",
+    "hyperscaler_capex",
+    "competition",
+    "export_controls",
+    "software_ecosystem"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 33
+================================================================================
+
+QUESTION:
+What could go wrong for Nvidia next year?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "nvidia",
+  "asset_type": "equity",
+  "intent": "risk",
+  "time": [
+    {
+      "role": "target",
+      "direction": "future",
+      "unit": "year",
+      "value": 1
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "ai_demand",
+    "revenue_growth",
+    "earnings",
+    "margins",
+    "valuation",
+    "hyperscaler_capex",
+    "competition",
+    "export_controls",
+    "software_ecosystem"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 34
+================================================================================
+
+QUESTION:
+What are the risks for oil prices?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "oil",
+  "asset_type": "commodity",
+  "intent": "risk",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "supply",
+    "demand",
+    "opec",
+    "inventories",
+    "spare_capacity",
+    "geopolitics",
+    "shipping",
+    "refining"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 35
+================================================================================
+
+QUESTION:
+What are the risks of higher interest rates?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "interest_rates",
+  "asset_type": "macro",
+  "intent": "risk",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "inflation",
+    "labor_market",
+    "economic_growth",
+    "fed_policy",
+    "yield_curve",
+    "liquidity",
+    "credit_conditions",
+    "housing"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 36
+================================================================================
+
+QUESTION:
+What are the opportunities for gold?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "opportunity",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 37
+================================================================================
+
+QUESTION:
+What could push gold higher?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "drivers",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 38
+================================================================================
+
+QUESTION:
+What is the upside case for Bitcoin?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "bitcoin",
+  "asset_type": "crypto",
+  "intent": "opportunity",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "institutional_adoption",
+    "etf_flows",
+    "liquidity",
+    "regulation",
+    "network_activity",
+    "macro_conditions",
+    "volatility",
+    "market_sentiment"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 39
+================================================================================
+
+QUESTION:
+What could drive Nvidia higher?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "nvidia",
+  "asset_type": "equity",
+  "intent": "drivers",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "ai_demand",
+    "revenue_growth",
+    "earnings",
+    "margins",
+    "valuation",
+    "hyperscaler_capex",
+    "competition",
+    "export_controls",
+    "software_ecosystem"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 40
+================================================================================
+
+QUESTION:
+What are the bullish catalysts for oil?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "oil",
+  "asset_type": "commodity",
+  "intent": "opportunity",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "supply",
+    "demand",
+    "opec",
+    "inventories",
+    "spare_capacity",
+    "geopolitics",
+    "shipping",
+    "refining"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 41
+================================================================================
+
+QUESTION:
+What could cause interest rates to fall?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "interest_rates",
+  "asset_type": "macro",
+  "intent": "drivers",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "inflation",
+    "labor_market",
+    "economic_growth",
+    "fed_policy",
+    "yield_curve",
+    "liquidity",
+    "credit_conditions",
+    "housing"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 42
+================================================================================
+
+QUESTION:
+What is driving gold prices?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "drivers",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 43
+================================================================================
+
+QUESTION:
+What are the main drivers of Bitcoin?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "bitcoin",
+  "asset_type": "crypto",
+  "intent": "drivers",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "institutional_adoption",
+    "etf_flows",
+    "liquidity",
+    "regulation",
+    "network_activity",
+    "macro_conditions",
+    "volatility",
+    "market_sentiment"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 44
+================================================================================
+
+QUESTION:
+What is driving Nvidia stock?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "nvidia",
+  "asset_type": "equity",
+  "intent": "drivers",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "ai_demand",
+    "revenue_growth",
+    "earnings",
+    "margins",
+    "valuation",
+    "hyperscaler_capex",
+    "competition",
+    "export_controls",
+    "software_ecosystem"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 45
+================================================================================
+
+QUESTION:
+What determines oil prices?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "oil",
+  "asset_type": "commodity",
+  "intent": "drivers",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "supply",
+    "demand",
+    "opec",
+    "inventories",
+    "spare_capacity",
+    "geopolitics",
+    "shipping",
+    "refining"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 46
+================================================================================
+
+QUESTION:
+What is driving interest rates?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "interest_rates",
+  "asset_type": "macro",
+  "intent": "drivers",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "inflation",
+    "labor_market",
+    "economic_growth",
+    "fed_policy",
+    "yield_curve",
+    "liquidity",
+    "credit_conditions",
+    "housing"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 47
+================================================================================
+
+QUESTION:
+Why is gold moving?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "drivers",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 48
+================================================================================
+
+QUESTION:
+Why is Bitcoin going up?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "bitcoin",
+  "asset_type": "crypto",
+  "intent": "drivers",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "institutional_adoption",
+    "etf_flows",
+    "liquidity",
+    "regulation",
+    "network_activity",
+    "macro_conditions",
+    "volatility",
+    "market_sentiment"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 49
+================================================================================
+
+QUESTION:
+What is the sentiment around gold?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "sentiment",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 50
+================================================================================
+
+QUESTION:
+Gold market sentiment right now
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "sentiment",
+  "time": [
+    {
+      "role": "target",
+      "direction": "current"
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 51
+================================================================================
+
+QUESTION:
+Is sentiment bullish or bearish for Bitcoin?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "bitcoin",
+  "asset_type": "crypto",
+  "intent": "sentiment",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "institutional_adoption",
+    "etf_flows",
+    "liquidity",
+    "regulation",
+    "network_activity",
+    "macro_conditions",
+    "volatility",
+    "market_sentiment"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 52
+================================================================================
+
+QUESTION:
+What is investor sentiment around Nvidia?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "nvidia",
+  "asset_type": "equity",
+  "intent": "sentiment",
+  "time": [
+    {
+      "role": "target",
+      "direction": "current"
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "ai_demand",
+    "revenue_growth",
+    "earnings",
+    "margins",
+    "valuation",
+    "hyperscaler_capex",
+    "competition",
+    "export_controls",
+    "software_ecosystem"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 53
+================================================================================
+
+QUESTION:
+What is market sentiment for oil?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "oil",
+  "asset_type": "commodity",
+  "intent": "sentiment",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "supply",
+    "demand",
+    "opec",
+    "inventories",
+    "spare_capacity",
+    "geopolitics",
+    "shipping",
+    "refining"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 54
+================================================================================
+
+QUESTION:
+How would higher interest rates affect gold?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "impact",
+  "time": [],
+  "focus": [
+    "interest_rates"
+  ],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 55
+================================================================================
+
+QUESTION:
+How would lower interest rates affect gold?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "impact",
+  "time": [],
+  "focus": [
+    "interest_rates"
+  ],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 56
+================================================================================
+
+QUESTION:
+How does inflation affect gold?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "impact",
+  "time": [],
+  "focus": [
+    "inflation"
+  ],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 57
+================================================================================
+
+QUESTION:
+How does a stronger dollar affect gold?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "impact",
+  "time": [],
+  "focus": [
+    "usd"
+  ],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 58
+================================================================================
+
+QUESTION:
+How would ETF inflows affect Bitcoin?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "bitcoin",
+  "asset_type": "crypto",
+  "intent": "impact",
+  "time": [],
+  "focus": [
+    "etf_flows"
+  ],
+  "analysis_dimensions": [
+    "institutional_adoption",
+    "etf_flows",
+    "liquidity",
+    "regulation",
+    "network_activity",
+    "macro_conditions",
+    "volatility",
+    "market_sentiment"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 59
+================================================================================
+
+QUESTION:
+How would regulation affect Bitcoin?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "bitcoin",
+  "asset_type": "crypto",
+  "intent": "impact",
+  "time": [],
+  "focus": [
+    "regulation"
+  ],
+  "analysis_dimensions": [
+    "institutional_adoption",
+    "etf_flows",
+    "liquidity",
+    "regulation",
+    "network_activity",
+    "macro_conditions",
+    "volatility",
+    "market_sentiment"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 60
+================================================================================
+
+QUESTION:
+How would lower rates affect Nvidia?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "nvidia",
+  "asset_type": "equity",
+  "intent": "impact",
+  "time": [],
+  "focus": [
+    "interest_rates"
+  ],
+  "analysis_dimensions": [
+    "ai_demand",
+    "revenue_growth",
+    "earnings",
+    "margins",
+    "valuation",
+    "hyperscaler_capex",
+    "competition",
+    "export_controls",
+    "software_ecosystem"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 61
+================================================================================
+
+QUESTION:
+How would weaker AI demand affect Nvidia?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "nvidia",
+  "asset_type": "equity",
+  "intent": "impact",
+  "time": [],
+  "focus": [
+    "ai_demand"
+  ],
+  "analysis_dimensions": [
+    "ai_demand",
+    "revenue_growth",
+    "earnings",
+    "margins",
+    "valuation",
+    "hyperscaler_capex",
+    "competition",
+    "export_controls",
+    "software_ecosystem"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 62
+================================================================================
+
+QUESTION:
+How would China demand affect oil?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "oil",
+  "asset_type": "commodity",
+  "intent": "impact",
+  "time": [],
+  "focus": [
+    "demand"
+  ],
+  "analysis_dimensions": [
+    "supply",
+    "demand",
+    "opec",
+    "inventories",
+    "spare_capacity",
+    "geopolitics",
+    "shipping",
+    "refining"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 63
+================================================================================
+
+QUESTION:
+How would a recession affect oil prices?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "oil",
+  "asset_type": "commodity",
+  "intent": "impact",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "supply",
+    "demand",
+    "opec",
+    "inventories",
+    "spare_capacity",
+    "geopolitics",
+    "shipping",
+    "refining"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 64
+================================================================================
+
+QUESTION:
+How do interest rates and inflation affect gold?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "impact",
+  "time": [],
+  "focus": [
+    "interest_rates",
+    "inflation"
+  ],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 65
+================================================================================
+
+QUESTION:
+How would higher rates and a stronger dollar affect gold?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "impact",
+  "time": [],
+  "focus": [
+    "interest_rates",
+    "usd"
+  ],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 66
+================================================================================
+
+QUESTION:
+How do ETF flows and regulation affect Bitcoin?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "bitcoin",
+  "asset_type": "crypto",
+  "intent": "impact",
+  "time": [],
+  "focus": [
+    "etf_flows",
+    "regulation"
+  ],
+  "analysis_dimensions": [
+    "institutional_adoption",
+    "etf_flows",
+    "liquidity",
+    "regulation",
+    "network_activity",
+    "macro_conditions",
+    "volatility",
+    "market_sentiment"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 67
+================================================================================
+
+QUESTION:
+How do AI demand and export controls affect Nvidia?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "nvidia",
+  "asset_type": "equity",
+  "intent": "impact",
+  "time": [],
+  "focus": [
+    "ai_demand",
+    "export_controls"
+  ],
+  "analysis_dimensions": [
+    "ai_demand",
+    "revenue_growth",
+    "earnings",
+    "margins",
+    "valuation",
+    "hyperscaler_capex",
+    "competition",
+    "export_controls",
+    "software_ecosystem"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 68
+================================================================================
+
+QUESTION:
+How do OPEC supply and China demand affect oil?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "oil",
+  "asset_type": "commodity",
+  "intent": "impact",
+  "time": [],
+  "focus": [
+    "opec",
+    "supply",
+    "demand"
+  ],
+  "analysis_dimensions": [
+    "supply",
+    "demand",
+    "opec",
+    "inventories",
+    "spare_capacity",
+    "geopolitics",
+    "shipping",
+    "refining"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 69
+================================================================================
+
+QUESTION:
+How do inflation and labor markets affect interest rates?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "interest_rates",
+  "asset_type": "macro",
+  "intent": "impact",
+  "time": [],
+  "focus": [
+    "inflation",
+    "labor_market"
+  ],
+  "analysis_dimensions": [
+    "inflation",
+    "labor_market",
+    "economic_growth",
+    "fed_policy",
+    "yield_curve",
+    "liquidity",
+    "credit_conditions",
+    "housing"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 70
+================================================================================
+
+QUESTION:
+What happens to gold if the Fed cuts rates?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "impact",
+  "time": [],
+  "focus": [
+    "interest_rates"
+  ],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 71
+================================================================================
+
+QUESTION:
+What happens to gold if inflation rises and rates fall?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "impact",
+  "time": [],
+  "focus": [
+    "inflation",
+    "interest_rates"
+  ],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 72
+================================================================================
+
+QUESTION:
+What if the dollar weakens sharply?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "interest_rates",
+  "asset_type": "macro",
+  "intent": "scenario",
+  "time": [],
+  "focus": [
+    "usd"
+  ],
+  "analysis_dimensions": [
+    "inflation",
+    "labor_market",
+    "economic_growth",
+    "fed_policy",
+    "yield_curve",
+    "liquidity",
+    "credit_conditions",
+    "housing"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 73
+================================================================================
+
+QUESTION:
+What happens to Bitcoin if institutional adoption accelerates?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "bitcoin",
+  "asset_type": "crypto",
+  "intent": "impact",
+  "time": [],
+  "focus": [
+    "institutional_adoption"
+  ],
+  "analysis_dimensions": [
+    "institutional_adoption",
+    "etf_flows",
+    "liquidity",
+    "regulation",
+    "network_activity",
+    "macro_conditions",
+    "volatility",
+    "market_sentiment"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 74
+================================================================================
+
+QUESTION:
+What if Bitcoin ETF flows turn negative?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "bitcoin",
+  "asset_type": "crypto",
+  "intent": "scenario",
+  "time": [],
+  "focus": [
+    "etf_flows"
+  ],
+  "analysis_dimensions": [
+    "institutional_adoption",
+    "etf_flows",
+    "liquidity",
+    "regulation",
+    "network_activity",
+    "macro_conditions",
+    "volatility",
+    "market_sentiment"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 75
+================================================================================
+
+QUESTION:
+What happens to Nvidia if AI spending slows?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "nvidia",
+  "asset_type": "equity",
+  "intent": "impact",
+  "time": [],
+  "focus": [
+    "ai_demand"
+  ],
+  "analysis_dimensions": [
+    "ai_demand",
+    "revenue_growth",
+    "earnings",
+    "margins",
+    "valuation",
+    "hyperscaler_capex",
+    "competition",
+    "export_controls",
+    "software_ecosystem"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 76
+================================================================================
+
+QUESTION:
+What if Nvidia margins fall next year?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "nvidia",
+  "asset_type": "equity",
+  "intent": "scenario",
+  "time": [
+    {
+      "role": "target",
+      "direction": "future",
+      "unit": "year",
+      "value": 1
+    }
+  ],
+  "focus": [
+    "margins"
+  ],
+  "analysis_dimensions": [
+    "ai_demand",
+    "revenue_growth",
+    "earnings",
+    "margins",
+    "valuation",
+    "hyperscaler_capex",
+    "competition",
+    "export_controls",
+    "software_ecosystem"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 77
+================================================================================
+
+QUESTION:
+What happens to oil if OPEC cuts production?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "oil",
+  "asset_type": "commodity",
+  "intent": "impact",
+  "time": [],
+  "focus": [
+    "opec"
+  ],
+  "analysis_dimensions": [
+    "supply",
+    "demand",
+    "opec",
+    "inventories",
+    "spare_capacity",
+    "geopolitics",
+    "shipping",
+    "refining"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 78
+================================================================================
+
+QUESTION:
+What if China enters a recession?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "oil",
+  "asset_type": "commodity",
+  "intent": "scenario",
+  "time": [
+    {
+      "role": "target",
+      "direction": "future"
+    }
+  ],
+  "focus": [
+    "economic_growth"
+  ],
+  "analysis_dimensions": [
+    "supply",
+    "demand",
+    "opec",
+    "inventories",
+    "spare_capacity",
+    "geopolitics",
+    "shipping",
+    "refining"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 79
+================================================================================
+
+QUESTION:
+What happens to interest rates if inflation stays high?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "interest_rates",
+  "asset_type": "macro",
+  "intent": "impact",
+  "time": [],
+  "focus": [
+    "inflation"
+  ],
+  "analysis_dimensions": [
+    "inflation",
+    "labor_market",
+    "economic_growth",
+    "fed_policy",
+    "yield_curve",
+    "liquidity",
+    "credit_conditions",
+    "housing"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 80
+================================================================================
+
+QUESTION:
+Gold vs Bitcoin
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "comparison",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": "bitcoin"
+}
+
+================================================================================
+TEST 81
+================================================================================
+
+QUESTION:
+Gold vs Bitcoin risk
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "comparison",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": "bitcoin"
+}
+
+================================================================================
+TEST 82
+================================================================================
+
+QUESTION:
+Gold or Bitcoin for the next 3 years?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "comparison",
+  "time": [
+    {
+      "role": "target",
+      "direction": "future",
+      "unit": "year",
+      "value": 3
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": "bitcoin"
+}
+
+================================================================================
+TEST 83
+================================================================================
+
+QUESTION:
+Compare gold and Bitcoin sentiment
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "comparison",
+  "time": [],
+  "focus": [
+    "sentiment"
+  ],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": "bitcoin"
+}
+
+================================================================================
+TEST 84
+================================================================================
+
+QUESTION:
+Compare Nvidia and Bitcoin performance
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "nvidia",
+  "asset_type": "equity",
+  "intent": "comparison",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "ai_demand",
+    "revenue_growth",
+    "earnings",
+    "margins",
+    "valuation",
+    "hyperscaler_capex",
+    "competition",
+    "export_controls",
+    "software_ecosystem"
+  ],
+  "comparison": "bitcoin"
+}
+
+================================================================================
+TEST 85
+================================================================================
+
+QUESTION:
+Oil vs gold outlook
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "oil",
+  "asset_type": "commodity",
+  "intent": "outlook",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "supply",
+    "demand",
+    "opec",
+    "inventories",
+    "spare_capacity",
+    "geopolitics",
+    "shipping",
+    "refining"
+  ],
+  "comparison": "gold"
+}
+
+================================================================================
+TEST 86
+================================================================================
+
+QUESTION:
+Which has more upside, gold or Bitcoin?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "comparison",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": "bitcoin"
+}
+
+================================================================================
+TEST 87
+================================================================================
+
+QUESTION:
+Which is riskier, Nvidia or Bitcoin?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "nvidia",
+  "asset_type": "equity",
+  "intent": "comparison",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "ai_demand",
+    "revenue_growth",
+    "earnings",
+    "margins",
+    "valuation",
+    "hyperscaler_capex",
+    "competition",
+    "export_controls",
+    "software_ecosystem"
+  ],
+  "comparison": "bitcoin"
+}
+
+================================================================================
+TEST 88
+================================================================================
+
+QUESTION:
+Is Nvidia expensive?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "nvidia",
+  "asset_type": "equity",
+  "intent": "valuation",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "ai_demand",
+    "revenue_growth",
+    "earnings",
+    "margins",
+    "valuation",
+    "hyperscaler_capex",
+    "competition",
+    "export_controls",
+    "software_ecosystem"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 89
+================================================================================
+
+QUESTION:
+What is Nvidia's valuation?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "nvidia",
+  "asset_type": "equity",
+  "intent": "valuation",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "ai_demand",
+    "revenue_growth",
+    "earnings",
+    "margins",
+    "valuation",
+    "hyperscaler_capex",
+    "competition",
+    "export_controls",
+    "software_ecosystem"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 90
+================================================================================
+
+QUESTION:
+How strong are Nvidia fundamentals?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "nvidia",
+  "asset_type": "equity",
+  "intent": "fundamentals",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "ai_demand",
+    "revenue_growth",
+    "earnings",
+    "margins",
+    "valuation",
+    "hyperscaler_capex",
+    "competition",
+    "export_controls",
+    "software_ecosystem"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 91
+================================================================================
+
+QUESTION:
+Is Nvidia overvalued?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "nvidia",
+  "asset_type": "equity",
+  "intent": "valuation",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "ai_demand",
+    "revenue_growth",
+    "earnings",
+    "margins",
+    "valuation",
+    "hyperscaler_capex",
+    "competition",
+    "export_controls",
+    "software_ecosystem"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 92
+================================================================================
+
+QUESTION:
+What are Nvidia's earnings risks?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "nvidia",
+  "asset_type": "equity",
+  "intent": "risk",
+  "time": [],
+  "focus": [
+    "earnings"
+  ],
+  "analysis_dimensions": [
+    "ai_demand",
+    "revenue_growth",
+    "earnings",
+    "margins",
+    "valuation",
+    "hyperscaler_capex",
+    "competition",
+    "export_controls",
+    "software_ecosystem"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 93
+================================================================================
+
+QUESTION:
+What does Nvidia revenue growth look like?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "nvidia",
+  "asset_type": "equity",
+  "intent": "trend",
+  "time": [],
+  "focus": [
+    "revenue_growth"
+  ],
+  "analysis_dimensions": [
+    "ai_demand",
+    "revenue_growth",
+    "earnings",
+    "margins",
+    "valuation",
+    "hyperscaler_capex",
+    "competition",
+    "export_controls",
+    "software_ecosystem"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 94
+================================================================================
+
+QUESTION:
+Why gold?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "drivers",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 95
+================================================================================
+
+QUESTION:
+Why Bitcoin?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "bitcoin",
+  "asset_type": "crypto",
+  "intent": "drivers",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "institutional_adoption",
+    "etf_flows",
+    "liquidity",
+    "regulation",
+    "network_activity",
+    "macro_conditions",
+    "volatility",
+    "market_sentiment"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 96
+================================================================================
+
+QUESTION:
+Gold bullish?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "opportunity",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 97
+================================================================================
+
+QUESTION:
+Bitcoin bearish?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "bitcoin",
+  "asset_type": "crypto",
+  "intent": "risk",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "institutional_adoption",
+    "etf_flows",
+    "liquidity",
+    "regulation",
+    "network_activity",
+    "macro_conditions",
+    "volatility",
+    "market_sentiment"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 98
+================================================================================
+
+QUESTION:
+Nvidia expensive?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "nvidia",
+  "asset_type": "equity",
+  "intent": "valuation",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "ai_demand",
+    "revenue_growth",
+    "earnings",
+    "margins",
+    "valuation",
+    "hyperscaler_capex",
+    "competition",
+    "export_controls",
+    "software_ecosystem"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 99
+================================================================================
+
+QUESTION:
+Oil going higher?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "oil",
+  "asset_type": "commodity",
+  "intent": "outlook",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "supply",
+    "demand",
+    "opec",
+    "inventories",
+    "spare_capacity",
+    "geopolitics",
+    "shipping",
+    "refining"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 100
+================================================================================
+
+QUESTION:
+Rates going down?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "interest_rates",
+  "asset_type": "macro",
+  "intent": "trend",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "inflation",
+    "labor_market",
+    "economic_growth",
+    "fed_policy",
+    "yield_curve",
+    "liquidity",
+    "credit_conditions",
+    "housing"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 101
+================================================================================
+
+QUESTION:
+Gold safe haven?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "risk",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 102
+================================================================================
+
+QUESTION:
+Gold outlook
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "outlook",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 103
+================================================================================
+
+QUESTION:
+Gold current outlook
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "outlook",
+  "time": [
+    {
+      "role": "target",
+      "direction": "current"
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 104
+================================================================================
+
+QUESTION:
+Gold today
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "status",
+  "time": [
+    {
+      "role": "target",
+      "direction": "current"
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 105
+================================================================================
+
+QUESTION:
+Gold right now
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "status",
+  "time": [
+    {
+      "role": "target",
+      "direction": "current"
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 106
+================================================================================
+
+QUESTION:
+Gold next
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "outlook",
+  "time": [
+    {
+      "role": "target",
+      "direction": "future"
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 107
+================================================================================
+
+QUESTION:
+Gold going forward
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "outlook",
+  "time": [
+    {
+      "role": "target",
+      "direction": "future"
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 108
+================================================================================
+
+QUESTION:
+Gold near term outlook
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "outlook",
+  "time": [
+    {
+      "role": "target",
+      "direction": "future",
+      "unit": "month",
+      "value": 1
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 109
+================================================================================
+
+QUESTION:
+Gold long term outlook
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "outlook",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 110
+================================================================================
+
+QUESTION:
+Gold 3 years
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "outlook",
+  "time": [
+    {
+      "role": "target",
+      "direction": "future",
+      "unit": "year",
+      "value": 3
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 111
+================================================================================
+
+QUESTION:
+Gold last 3 years outlook
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "outlook",
+  "time": [
+    {
+      "role": "evidence",
+      "direction": "past",
+      "unit": "year",
+      "value": 3
+    },
+    {
+      "role": "target",
+      "direction": "future",
+      "unit": "year",
+      "value": 3
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 112
+================================================================================
+
+QUESTION:
+Gold outlook based on last 3 years
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "outlook",
+  "time": [
+    {
+      "role": "evidence",
+      "direction": "past",
+      "unit": "year",
+      "value": 3
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 113
+================================================================================
+
+QUESTION:
+Gold next 18 months
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "outlook",
+  "time": [
+    {
+      "role": "target",
+      "direction": "future",
+      "unit": "month",
+      "value": 18
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 114
+================================================================================
+
+QUESTION:
+Gold this year
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "trend",
+  "time": [
+    {
+      "role": "evidence",
+      "direction": "past",
+      "unit": "year",
+      "value": 1
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 115
+================================================================================
+
+QUESTION:
+Gold this quarter
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "status",
+  "time": [
+    {
+      "role": "target",
+      "direction": "current",
+      "unit": "quarter",
+      "value": 1
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 116
+================================================================================
+
+QUESTION:
+Gold year to date
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "trend",
+  "time": [
+    {
+      "role": "evidence",
+      "direction": "past",
+      "unit": "year",
+      "value": 1
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 117
+================================================================================
+
+QUESTION:
+Gold since 2024
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "trend",
+  "time": [
+    {
+      "role": "evidence",
+      "direction": "past",
+      "unit": "year",
+      "value": 2024
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 118
+================================================================================
+
+QUESTION:
+Gold between 2024 and 2026
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "trend",
+  "time": [
+    {
+      "role": "evidence",
+      "direction": "past",
+      "unit": "year",
+      "value": 2
+    },
+    {
+      "role": "target",
+      "direction": "future",
+      "unit": "year",
+      "value": 1
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 119
+================================================================================
+
+QUESTION:
+Gold in 2025
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "status",
+  "time": [
+    {
+      "role": "evidence",
+      "direction": "past",
+      "unit": "year",
+      "value": 1
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 120
+================================================================================
+
+QUESTION:
+Gold short term
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "outlook",
+  "time": [
+    {
+      "role": "target",
+      "direction": "future",
+      "unit": "month",
+      "value": 1
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 121
+================================================================================
+
+QUESTION:
+Gold medium term
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "outlook",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 122
+================================================================================
+
+QUESTION:
+Gold long term
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "outlook",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 123
+================================================================================
+
+QUESTION:
+BTC outlook
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "bitcoin",
+  "asset_type": "crypto",
+  "intent": "outlook",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "institutional_adoption",
+    "etf_flows",
+    "liquidity",
+    "regulation",
+    "network_activity",
+    "macro_conditions",
+    "volatility",
+    "market_sentiment"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 124
+================================================================================
+
+QUESTION:
+BTC risks
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "bitcoin",
+  "asset_type": "crypto",
+  "intent": "risk",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "institutional_adoption",
+    "etf_flows",
+    "liquidity",
+    "regulation",
+    "network_activity",
+    "macro_conditions",
+    "volatility",
+    "market_sentiment"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 125
+================================================================================
+
+QUESTION:
+NVDA outlook
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "nvidia",
+  "asset_type": "equity",
+  "intent": "outlook",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "ai_demand",
+    "revenue_growth",
+    "earnings",
+    "margins",
+    "valuation",
+    "hyperscaler_capex",
+    "competition",
+    "export_controls",
+    "software_ecosystem"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 126
+================================================================================
+
+QUESTION:
+NVDA valuation
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "nvidia",
+  "asset_type": "equity",
+  "intent": "valuation",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "ai_demand",
+    "revenue_growth",
+    "earnings",
+    "margins",
+    "valuation",
+    "hyperscaler_capex",
+    "competition",
+    "export_controls",
+    "software_ecosystem"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 127
+================================================================================
+
+QUESTION:
+crude oil outlook
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "oil",
+  "asset_type": "commodity",
+  "intent": "outlook",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "supply",
+    "demand",
+    "opec",
+    "inventories",
+    "spare_capacity",
+    "geopolitics",
+    "shipping",
+    "refining"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 128
+================================================================================
+
+QUESTION:
+crude prices last quarter
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "oil",
+  "asset_type": "commodity",
+  "intent": "trend",
+  "time": [
+    {
+      "role": "evidence",
+      "direction": "past",
+      "unit": "quarter",
+      "value": 1
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "supply",
+    "demand",
+    "opec",
+    "inventories",
+    "spare_capacity",
+    "geopolitics",
+    "shipping",
+    "refining"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 129
+================================================================================
+
+QUESTION:
+Fed rates next year
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "interest_rates",
+  "asset_type": "macro",
+  "intent": "outlook",
+  "time": [
+    {
+      "role": "target",
+      "direction": "future",
+      "unit": "year",
+      "value": 1
+    }
+  ],
+  "focus": [
+    "fed_policy"
+  ],
+  "analysis_dimensions": [
+    "inflation",
+    "labor_market",
+    "economic_growth",
+    "fed_policy",
+    "yield_curve",
+    "liquidity",
+    "credit_conditions",
+    "housing"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 130
+================================================================================
+
+QUESTION:
+rate cuts impact on gold
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "impact",
+  "time": [],
+  "focus": [
+    "interest_rates"
+  ],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 131
+================================================================================
+
+QUESTION:
+yellow metal outlook
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "outlook",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 132
+================================================================================
+
+QUESTION:
+GOLD PRICES LAST 3 YEARS
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "trend",
+  "time": [
+    {
+      "role": "evidence",
+      "direction": "past",
+      "unit": "year",
+      "value": 3
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 133
+================================================================================
+
+QUESTION:
+gold pricez last 3 years
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "trend",
+  "time": [
+    {
+      "role": "evidence",
+      "direction": "past",
+      "unit": "year",
+      "value": 3
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 134
+================================================================================
+
+QUESTION:
+bitcion outlook next year
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "bitcoin",
+  "asset_type": "crypto",
+  "intent": "outlook",
+  "time": [
+    {
+      "role": "target",
+      "direction": "future",
+      "unit": "year",
+      "value": 1
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "institutional_adoption",
+    "etf_flows",
+    "liquidity",
+    "regulation",
+    "network_activity",
+    "macro_conditions",
+    "volatility",
+    "market_sentiment"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 135
+================================================================================
+
+QUESTION:
+nvida risks
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "nvidia",
+  "asset_type": "equity",
+  "intent": "risk",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "ai_demand",
+    "revenue_growth",
+    "earnings",
+    "margins",
+    "valuation",
+    "hyperscaler_capex",
+    "competition",
+    "export_controls",
+    "software_ecosystem"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 136
+================================================================================
+
+QUESTION:
+OIL??? next year
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "oil",
+  "asset_type": "commodity",
+  "intent": "outlook",
+  "time": [
+    {
+      "role": "target",
+      "direction": "future",
+      "unit": "year",
+      "value": 1
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "supply",
+    "demand",
+    "opec",
+    "inventories",
+    "spare_capacity",
+    "geopolitics",
+    "shipping",
+    "refining"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 137
+================================================================================
+
+QUESTION:
+gold   outlook   3 years
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "outlook",
+  "time": [
+    {
+      "role": "target",
+      "direction": "future",
+      "unit": "year",
+      "value": 3
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 138
+================================================================================
+
+QUESTION:
+gold price???
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "status",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 139
+================================================================================
+
+QUESTION:
+btc bullish???
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "bitcoin",
+  "asset_type": "crypto",
+  "intent": "sentiment",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "institutional_adoption",
+    "etf_flows",
+    "liquidity",
+    "regulation",
+    "network_activity",
+    "macro_conditions",
+    "volatility",
+    "market_sentiment"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 140
+================================================================================
+
+QUESTION:
+Altının son 3 yıllık trendi nedir?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "trend",
+  "time": [
+    {
+      "role": "evidence",
+      "direction": "past",
+      "unit": "year",
+      "value": 3
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 141
+================================================================================
+
+QUESTION:
+Gold önümüzdeki 3 yıl ne olur?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "outlook",
+  "time": [
+    {
+      "role": "target",
+      "direction": "future",
+      "unit": "year",
+      "value": 3
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 142
+================================================================================
+
+QUESTION:
+Bitcoin için en büyük riskler neler?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "bitcoin",
+  "asset_type": "crypto",
+  "intent": "risk",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "institutional_adoption",
+    "etf_flows",
+    "liquidity",
+    "regulation",
+    "network_activity",
+    "macro_conditions",
+    "volatility",
+    "market_sentiment"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 143
+================================================================================
+
+QUESTION:
+Nvidia gelecek yıl outlook nasıl?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "nvidia",
+  "asset_type": "equity",
+  "intent": "outlook",
+  "time": [
+    {
+      "role": "target",
+      "direction": "future",
+      "unit": "year",
+      "value": 1
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "ai_demand",
+    "revenue_growth",
+    "earnings",
+    "margins",
+    "valuation",
+    "hyperscaler_capex",
+    "competition",
+    "export_controls",
+    "software_ecosystem"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 144
+================================================================================
+
+QUESTION:
+Faizler düşerse gold nasıl etkilenir?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "impact",
+  "time": [],
+  "focus": [
+    "interest_rates"
+  ],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 145
+================================================================================
+
+QUESTION:
+Oil fiyatlarını ne etkiliyor?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "oil",
+  "asset_type": "commodity",
+  "intent": "drivers",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "supply",
+    "demand",
+    "opec",
+    "inventories",
+    "spare_capacity",
+    "geopolitics",
+    "shipping",
+    "refining"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 146
+================================================================================
+
+QUESTION:
+Gold ve Bitcoin karşılaştır
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "comparison",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": "bitcoin"
+}
+
+================================================================================
+TEST 147
+================================================================================
+
+QUESTION:
+I don't want a forecast, just tell me what is happening with gold now
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "status",
+  "time": [
+    {
+      "role": "target",
+      "direction": "current"
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 148
+================================================================================
+
+QUESTION:
+Don't compare gold with Bitcoin, just analyze gold
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "summary",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 149
+================================================================================
+
+QUESTION:
+Not the past, I want gold outlook for next year
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "outlook",
+  "time": [
+    {
+      "role": "target",
+      "direction": "future",
+      "unit": "year",
+      "value": 1
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 150
+================================================================================
+
+QUESTION:
+Not next year, show me gold over the last year
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "trend",
+  "time": [
+    {
+      "role": "evidence",
+      "direction": "past",
+      "unit": "year",
+      "value": 1
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 151
+================================================================================
+
+QUESTION:
+What are the risks and opportunities for gold?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "risk",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 152
+================================================================================
+
+QUESTION:
+Give me gold trend and outlook
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "outlook",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 153
+================================================================================
+
+QUESTION:
+What is driving gold and what are the risks?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "drivers",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 154
+================================================================================
+
+QUESTION:
+Analyze Bitcoin sentiment, risks and outlook
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "bitcoin",
+  "asset_type": "crypto",
+  "intent": "outlook",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "institutional_adoption",
+    "etf_flows",
+    "liquidity",
+    "regulation",
+    "network_activity",
+    "macro_conditions",
+    "volatility",
+    "market_sentiment"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 155
+================================================================================
+
+QUESTION:
+Nvidia valuation and future outlook
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "nvidia",
+  "asset_type": "equity",
+  "intent": "valuation",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "ai_demand",
+    "revenue_growth",
+    "earnings",
+    "margins",
+    "valuation",
+    "hyperscaler_capex",
+    "competition",
+    "export_controls",
+    "software_ecosystem"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 156
+================================================================================
+
+QUESTION:
+Oil risks and opportunities next year
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "oil",
+  "asset_type": "commodity",
+  "intent": "scenario",
+  "time": [
+    {
+      "role": "target",
+      "direction": "future",
+      "unit": "year",
+      "value": 1
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "supply",
+    "demand",
+    "opec",
+    "inventories",
+    "spare_capacity",
+    "geopolitics",
+    "shipping",
+    "refining"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 157
+================================================================================
+
+QUESTION:
+Compare gold now with 3 years ago
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "comparison",
+  "time": [
+    {
+      "role": "evidence",
+      "direction": "past",
+      "unit": "year",
+      "value": 3
+    },
+    {
+      "role": "target",
+      "direction": "current"
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 158
+================================================================================
+
+QUESTION:
+How did gold perform last year and what is the outlook for next year?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "outlook",
+  "time": [
+    {
+      "role": "evidence",
+      "direction": "past",
+      "unit": "year",
+      "value": 1
+    },
+    {
+      "role": "target",
+      "direction": "future",
+      "unit": "year",
+      "value": 1
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 159
+================================================================================
+
+QUESTION:
+Bitcoin last 6 months versus next 6 months
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "bitcoin",
+  "asset_type": "crypto",
+  "intent": "outlook",
+  "time": [
+    {
+      "role": "evidence",
+      "direction": "past",
+      "unit": "month",
+      "value": 6
+    },
+    {
+      "role": "target",
+      "direction": "future",
+      "unit": "month",
+      "value": 6
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "institutional_adoption",
+    "etf_flows",
+    "liquidity",
+    "regulation",
+    "network_activity",
+    "macro_conditions",
+    "volatility",
+    "market_sentiment"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 160
+================================================================================
+
+QUESTION:
+What changed in Nvidia over the last quarter and what happens next quarter?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "nvidia",
+  "asset_type": "equity",
+  "intent": "outlook",
+  "time": [
+    {
+      "role": "evidence",
+      "direction": "past",
+      "unit": "quarter",
+      "value": 1
+    },
+    {
+      "role": "target",
+      "direction": "future",
+      "unit": "quarter",
+      "value": 1
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "ai_demand",
+    "revenue_growth",
+    "earnings",
+    "margins",
+    "valuation",
+    "hyperscaler_capex",
+    "competition",
+    "export_controls",
+    "software_ecosystem"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 161
+================================================================================
+
+QUESTION:
+Gold outlook considering real rates
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "outlook",
+  "time": [],
+  "focus": [
+    "real_rates"
+  ],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 162
+================================================================================
+
+QUESTION:
+Gold outlook considering inflation and central bank demand
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "outlook",
+  "time": [],
+  "focus": [
+    "inflation",
+    "central_bank_demand"
+  ],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 163
+================================================================================
+
+QUESTION:
+Bitcoin outlook based on ETF flows
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "bitcoin",
+  "asset_type": "crypto",
+  "intent": "outlook",
+  "time": [],
+  "focus": [
+    "etf_flows"
+  ],
+  "analysis_dimensions": [
+    "institutional_adoption",
+    "etf_flows",
+    "liquidity",
+    "regulation",
+    "network_activity",
+    "macro_conditions",
+    "volatility",
+    "market_sentiment"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 164
+================================================================================
+
+QUESTION:
+Nvidia outlook based on AI demand and margins
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "nvidia",
+  "asset_type": "equity",
+  "intent": "outlook",
+  "time": [],
+  "focus": [
+    "ai_demand",
+    "margins"
+  ],
+  "analysis_dimensions": [
+    "ai_demand",
+    "revenue_growth",
+    "earnings",
+    "margins",
+    "valuation",
+    "hyperscaler_capex",
+    "competition",
+    "export_controls",
+    "software_ecosystem"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 165
+================================================================================
+
+QUESTION:
+Oil outlook based on OPEC and inventories
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "oil",
+  "asset_type": "commodity",
+  "intent": "outlook",
+  "time": [],
+  "focus": [
+    "opec",
+    "inventories"
+  ],
+  "analysis_dimensions": [
+    "supply",
+    "demand",
+    "opec",
+    "inventories",
+    "spare_capacity",
+    "geopolitics",
+    "shipping",
+    "refining"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 166
+================================================================================
+
+QUESTION:
+Interest rate outlook based on inflation and employment
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "interest_rates",
+  "asset_type": "macro",
+  "intent": "outlook",
+  "time": [],
+  "focus": [
+    "inflation",
+    "labor_market"
+  ],
+  "analysis_dimensions": [
+    "inflation",
+    "labor_market",
+    "economic_growth",
+    "fed_policy",
+    "yield_curve",
+    "liquidity",
+    "credit_conditions",
+    "housing"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 167
+================================================================================
+
+QUESTION:
+Tesla outlook next year
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "nvidia",
+  "asset_type": "equity",
+  "intent": "outlook",
+  "time": [
+    {
+      "role": "target",
+      "direction": "future",
+      "unit": "year",
+      "value": 1
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "ai_demand",
+    "revenue_growth",
+    "earnings",
+    "margins",
+    "valuation",
+    "hyperscaler_capex",
+    "competition",
+    "export_controls",
+    "software_ecosystem"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 168
+================================================================================
+
+QUESTION:
+Apple stock risks
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "nvidia",
+  "asset_type": "equity",
+  "intent": "risk",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "ai_demand",
+    "revenue_growth",
+    "earnings",
+    "margins",
+    "valuation",
+    "hyperscaler_capex",
+    "competition",
+    "export_controls",
+    "software_ecosystem"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 169
+================================================================================
+
+QUESTION:
+Ethereum outlook
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "bitcoin",
+  "asset_type": "crypto",
+  "intent": "outlook",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "institutional_adoption",
+    "etf_flows",
+    "liquidity",
+    "regulation",
+    "network_activity",
+    "macro_conditions",
+    "volatility",
+    "market_sentiment"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 170
+================================================================================
+
+QUESTION:
+Silver prices last 3 years
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "trend",
+  "time": [
+    {
+      "role": "evidence",
+      "direction": "past",
+      "unit": "year",
+      "value": 3
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 171
+================================================================================
+
+QUESTION:
+S&P 500 outlook
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "interest_rates",
+  "asset_type": "macro",
+  "intent": "outlook",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "inflation",
+    "labor_market",
+    "economic_growth",
+    "fed_policy",
+    "yield_curve",
+    "liquidity",
+    "credit_conditions",
+    "housing"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 172
+================================================================================
+
+QUESTION:
+EUR USD outlook
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "interest_rates",
+  "asset_type": "macro",
+  "intent": "outlook",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "inflation",
+    "labor_market",
+    "economic_growth",
+    "fed_policy",
+    "yield_curve",
+    "liquidity",
+    "credit_conditions",
+    "housing"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 173
+================================================================================
+
+QUESTION:
+What is the outlook?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "interest_rates",
+  "asset_type": "macro",
+  "intent": "outlook",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "inflation",
+    "labor_market",
+    "economic_growth",
+    "fed_policy",
+    "yield_curve",
+    "liquidity",
+    "credit_conditions",
+    "housing"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 174
+================================================================================
+
+QUESTION:
+What are the risks?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "bitcoin",
+  "asset_type": "crypto",
+  "intent": "risk",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "institutional_adoption",
+    "etf_flows",
+    "liquidity",
+    "regulation",
+    "network_activity",
+    "macro_conditions",
+    "volatility",
+    "market_sentiment"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 175
+================================================================================
+
+QUESTION:
+What happened last year?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "interest_rates",
+  "asset_type": "macro",
+  "intent": "summary",
+  "time": [
+    {
+      "role": "evidence",
+      "direction": "past",
+      "unit": "year",
+      "value": 1
+    }
+  ],
+  "focus": [],
+  "analysis_dimensions": [
+    "inflation",
+    "labor_market",
+    "economic_growth",
+    "fed_policy",
+    "yield_curve",
+    "liquidity",
+    "credit_conditions",
+    "housing"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 176
+================================================================================
+
+QUESTION:
+Is it bullish?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "bitcoin",
+  "asset_type": "crypto",
+  "intent": "sentiment",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "institutional_adoption",
+    "etf_flows",
+    "liquidity",
+    "regulation",
+    "network_activity",
+    "macro_conditions",
+    "volatility",
+    "market_sentiment"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 177
+================================================================================
+
+QUESTION:
+Should I worry?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "bitcoin",
+  "asset_type": "crypto",
+  "intent": "risk",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "institutional_adoption",
+    "etf_flows",
+    "liquidity",
+    "regulation",
+    "network_activity",
+    "macro_conditions",
+    "volatility",
+    "market_sentiment"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 178
+================================================================================
+
+QUESTION:
+What happens next?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "interest_rates",
+  "asset_type": "macro",
+  "intent": "outlook",
+  "time": [],
+  "focus": [],
+  "analysis_dimensions": [
+    "inflation",
+    "labor_market",
+    "economic_growth",
+    "fed_policy",
+    "yield_curve",
+    "liquidity",
+    "credit_conditions",
+    "housing"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 179
+================================================================================
+
+QUESTION:
+Considering persistent inflation, elevated geopolitical risk and possible Fed cuts, what is the 2 year outlook for gold?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "gold",
+  "asset_type": "commodity",
+  "intent": "outlook",
+  "time": [
+    {
+      "role": "target",
+      "direction": "future",
+      "unit": "year",
+      "value": 2
+    }
+  ],
+  "focus": [
+    "inflation",
+    "geopolitics",
+    "interest_rates"
+  ],
+  "analysis_dimensions": [
+    "interest_rates",
+    "real_rates",
+    "usd",
+    "inflation",
+    "central_bank_demand",
+    "geopolitics",
+    "investment_flows",
+    "physical_demand",
+    "supply"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 180
+================================================================================
+
+QUESTION:
+Based on ETF flows over the last six months and expected regulation changes, what is Bitcoin's outlook for the next year?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "bitcoin",
+  "asset_type": "crypto",
+  "intent": "outlook",
+  "time": [
+    {
+      "role": "evidence",
+      "direction": "past",
+      "unit": "month",
+      "value": 6
+    },
+    {
+      "role": "target",
+      "direction": "future",
+      "unit": "year",
+      "value": 1
+    }
+  ],
+  "focus": [
+    "etf_flows",
+    "regulation"
+  ],
+  "analysis_dimensions": [
+    "institutional_adoption",
+    "etf_flows",
+    "liquidity",
+    "regulation",
+    "network_activity",
+    "macro_conditions",
+    "volatility",
+    "market_sentiment"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 181
+================================================================================
+
+QUESTION:
+Given slowing AI capex, export restrictions and current valuation, what are the main risks to Nvidia over the next 12 months?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "nvidia",
+  "asset_type": "equity",
+  "intent": "risk",
+  "time": [
+    {
+      "role": "target",
+      "direction": "future",
+      "unit": "month",
+      "value": 12
+    }
+  ],
+  "focus": [
+    "ai_demand",
+    "export_controls",
+    "valuation"
+  ],
+  "analysis_dimensions": [
+    "ai_demand",
+    "revenue_growth",
+    "earnings",
+    "margins",
+    "valuation",
+    "hyperscaler_capex",
+    "competition",
+    "export_controls",
+    "software_ecosystem"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 182
+================================================================================
+
+QUESTION:
+If OPEC reduces supply while Chinese demand improves, what could happen to oil prices over the next 6 months?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "oil",
+  "asset_type": "commodity",
+  "intent": "scenario",
+  "time": [
+    {
+      "role": "target",
+      "direction": "future",
+      "unit": "month",
+      "value": 6
+    }
+  ],
+  "focus": [
+    "opec",
+    "demand"
+  ],
+  "analysis_dimensions": [
+    "supply",
+    "demand",
+    "opec",
+    "inventories",
+    "spare_capacity",
+    "geopolitics",
+    "shipping",
+    "refining"
+  ],
+  "comparison": null
+}
+
+================================================================================
+TEST 183
+================================================================================
+
+QUESTION:
+If inflation remains above target but economic growth weakens, what is the likely direction of interest rates next year?
+
+STATUS:
+SUCCESS
+
+PARSED CONTEXT:
+{
+  "keyword": "interest_rates",
+  "asset_type": "macro",
+  "intent": "scenario",
+  "time": [
+    {
+      "role": "target",
+      "direction": "future",
+      "unit": "year",
+      "value": 1
+    }
+  ],
+  "focus": [
+    "inflation",
+    "economic_growth"
+  ],
+  "analysis_dimensions": [
+    "inflation",
+    "labor_market",
+    "economic_growth",
+    "fed_policy",
+    "yield_curve",
+    "liquidity",
+    "credit_conditions",
+    "housing"
+  ],
+  "comparison": null
+}
+
+================================================================================
+SUMMARY
+================================================================================
+
+TOTAL TESTS : 183
+SUCCESS     : 183
+ERROR       : 0

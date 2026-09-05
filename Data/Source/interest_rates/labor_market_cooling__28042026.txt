@@ -1,0 +1,33 @@
+TITLE: Labor Market Cooling
+KEYWORD: interest_rates
+DATE: 2026-04-28
+CONTENT_TYPE: synthetic_transcript
+SYNTHETIC: true
+
+Host: Today we are looking at Labor Market Cooling within the broader Interest Rates discussion. What has changed recently?
+
+Guest: The latest signals suggest a positive setup, but the conclusion depends on several assumptions. I would separate the current evidence from the longer-term narrative.
+
+Host: What is the main argument?
+
+Guest: The main argument is that labor market cooling has become more important to the Interest Rates outlook. Recent behavior suggests that market participants are paying closer attention to this factor than they were previously.
+
+Host: What are the key risks?
+
+Guest: The first risk is that expectations move faster than the underlying data. The second is that macro conditions or policy decisions change. A third risk is positioning: if too many investors hold the same view, even a small disappointment can create a sharp reversal.
+
+Host: Is there an opportunity as well?
+
+Guest: Yes. If the current trend persists and the supporting indicators strengthen, the market may be underestimating the duration of the move. The opportunity is strongest when multiple independent signals confirm the same thesis.
+
+Host: What would invalidate the thesis?
+
+Guest: I would watch for a sustained reversal in the relevant data, weaker participation, and a material change in policy or liquidity. One weak data point is not enough; the important signal is persistence.
+
+Host: What should investors monitor over the next quarter?
+
+Guest: Track trend direction, changes in conviction, and whether the risks being discussed begin to show up in actual decisions. The thesis should be updated as new evidence arrives.
+
+Host: Final takeaway?
+
+Guest: Labor Market Cooling is an important part of the Interest Rates story, but it should not be analyzed in isolation. The strongest conclusions come from combining the current signal with broader context and tracking how that relationship changes over time.

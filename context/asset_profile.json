@@ -1,0 +1,112 @@
+{
+  "gold": {
+    "aliases": [
+      "gold",
+      "gold price",
+      "gold prices",
+      "xau",
+      "xauusd",
+      "yellow metal",
+      "altin",
+      "altın"
+    ],
+    "asset_type": "commodity",
+    "analysis_dimensions": [
+      "interest_rates",
+      "real_rates",
+      "usd",
+      "inflation",
+      "central_bank_demand",
+      "geopolitics",
+      "investment_flows",
+      "physical_demand",
+      "supply"
+    ]
+  },
+
+  "bitcoin": {
+    "aliases": [
+      "bitcoin",
+      "btc",
+      "xbt"
+    ],
+    "asset_type": "crypto",
+    "analysis_dimensions": [
+      "institutional_adoption",
+      "etf_flows",
+      "liquidity",
+      "regulation",
+      "network_activity",
+      "macro_conditions",
+      "volatility",
+      "market_sentiment"
+    ]
+  },
+
+  "nvidia": {
+    "aliases": [
+      "nvidia",
+      "nvda",
+      "nvidia stock"
+    ],
+    "asset_type": "equity",
+    "analysis_dimensions": [
+      "ai_demand",
+      "revenue_growth",
+      "earnings",
+      "margins",
+      "valuation",
+      "hyperscaler_capex",
+      "competition",
+      "export_controls",
+      "software_ecosystem"
+    ]
+  },
+
+  "oil": {
+    "aliases": [
+      "oil",
+      "oil price",
+      "oil prices",
+      "crude",
+      "crude oil",
+      "crude prices",
+      "wti",
+      "brent"
+    ],
+    "asset_type": "commodity",
+    "analysis_dimensions": [
+      "supply",
+      "demand",
+      "opec",
+      "inventories",
+      "spare_capacity",
+      "geopolitics",
+      "shipping",
+      "refining"
+    ]
+  },
+
+  "interest_rates": {
+    "aliases": [
+      "interest rates",
+      "interest rate",
+      "rates",
+      "fed rates",
+      "policy rates",
+      "faiz",
+      "faizler"
+    ],
+    "asset_type": "macro",
+    "analysis_dimensions": [
+      "inflation",
+      "labor_market",
+      "economic_growth",
+      "fed_policy",
+      "yield_curve",
+      "liquidity",
+      "credit_conditions",
+      "housing"
+    ]
+  }
+}

@@ -1,6 +1,7 @@
 import ast
 import json
 import os
+import re
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -31,16 +32,76 @@ DATA_SOURCE_DIR = BASE_DIR / "Data" / "Source"
 
 CONTEXT_DIR = BASE_DIR / "context"
 
+CONTEXT_PROMPT_FILE = (
+    CONTEXT_DIR / "context_input_parser.txt"
+)
+
+ASSET_PROFILE_FILE = (
+    CONTEXT_DIR / "asset_profiles.json"
+)
+
+QUESTION_FILE = (
+    CONTEXT_DIR / "question_input_parser.txt"
+)
+
+TEST_RESULT_FILE = (
+    CONTEXT_DIR / "test_results_input_parser.txt"
+)
+
 
 # =========================================================
-# AVAILABLE KEYWORDS
+# CONSTANTS
+# =========================================================
+
+ALLOWED_INTENTS = {
+    "status",
+    "summary",
+    "trend",
+    "risk",
+    "opportunity",
+    "outlook",
+    "sentiment",
+    "drivers",
+    "impact",
+    "comparison",
+    "valuation",
+    "fundamentals",
+    "scenario"
+}
+
+
+# =========================================================
+# HELPERS
+# =========================================================
+
+def normalize_text(value: str) -> str:
+
+    value = value.strip().lower()
+
+    value = value.replace(
+        "_",
+        " "
+    )
+
+    value = re.sub(
+        r"\s+",
+        " ",
+        value
+    )
+
+    return value
+
+
+# =========================================================
+# DATA SOURCE KEYWORDS
 # =========================================================
 
 def get_available_keywords() -> list[str]:
 
     if not DATA_SOURCE_DIR.exists():
         raise FileNotFoundError(
-            f"Data source folder bulunamadı: {DATA_SOURCE_DIR}"
+            f"Data source folder bulunamadı: "
+            f"{DATA_SOURCE_DIR}"
         )
 
     keywords = [
@@ -49,123 +110,312 @@ def get_available_keywords() -> list[str]:
         if folder.is_dir()
     ]
 
-    return sorted(keywords)
-
-
-# =========================================================
-# LOAD CONTEXT PROMPT
-# =========================================================
-
-def load_context_prompt(
-    keywords: list[str]
-) -> str:
-
-    context_file = (
-        CONTEXT_DIR
-        / "context_input_parser.txt"
+    return sorted(
+        keywords
     )
 
-    if not context_file.exists():
+
+# =========================================================
+# ASSET PROFILES
+# =========================================================
+
+def load_asset_profiles() -> dict:
+
+    if not ASSET_PROFILE_FILE.exists():
         raise FileNotFoundError(
-            f"Context file bulunamadı: {context_file}"
+            f"Asset profile file bulunamadı: "
+            f"{ASSET_PROFILE_FILE}"
         )
 
-    context_template = context_file.read_text(
-        encoding="utf-8"
-    )
-
-    system_prompt = context_template.replace(
-        "{keywords}",
-        json.dumps(
-            keywords,
-            ensure_ascii=False
+    profiles = json.loads(
+        ASSET_PROFILE_FILE.read_text(
+            encoding="utf-8"
         )
     )
 
-    return system_prompt
-
-
-# =========================================================
-# LOAD TEST QUESTIONS
-# =========================================================
-
-def load_test_questions() -> list[str]:
-
-    question_file = (
-        CONTEXT_DIR
-        / "question_input_parser.txt"
-    )
-
-    if not question_file.exists():
-        raise FileNotFoundError(
-            f"Question file bulunamadı: {question_file}"
-        )
-
-    content = question_file.read_text(
-        encoding="utf-8"
-    )
-
-    try:
-        tree = ast.parse(content)
-
-    except SyntaxError as e:
+    if not isinstance(
+        profiles,
+        dict
+    ):
         raise ValueError(
-            "question_input_parser.txt valid Python syntax değil.\n"
-            f"{e}"
+            "asset_profiles.json root object "
+            "bir dictionary olmalı."
         )
 
-    for node in tree.body:
+    return profiles
 
-        if isinstance(node, ast.Assign):
 
-            for target in node.targets:
+# =========================================================
+# CONTEXT PROMPT
+# =========================================================
 
-                if (
-                    isinstance(target, ast.Name)
-                    and target.id == "questions"
-                ):
+def load_context_prompt() -> str:
 
-                    questions = ast.literal_eval(
-                        node.value
-                    )
+    if not CONTEXT_PROMPT_FILE.exists():
+        raise FileNotFoundError(
+            f"Context prompt bulunamadı: "
+            f"{CONTEXT_PROMPT_FILE}"
+        )
 
-                    if not isinstance(
-                        questions,
-                        list
-                    ):
-                        raise ValueError(
-                            "'questions' bir list olmalı."
-                        )
-
-                    if not all(
-                        isinstance(question, str)
-                        for question in questions
-                    ):
-                        raise ValueError(
-                            "questions içindeki tüm elemanlar string olmalı."
-                        )
-
-                    return questions
-
-    raise ValueError(
-        "question_input_parser.txt içinde "
-        "'questions' listesi bulunamadı."
+    return CONTEXT_PROMPT_FILE.read_text(
+        encoding="utf-8"
     )
 
 
 # =========================================================
-# PARSE USER INPUT
+# KEYWORD RESOLVER
 # =========================================================
 
-def parse_input(
+def resolve_keyword(
+    subject: str | None,
+    available_keywords: list[str],
+    profiles: dict
+) -> str | None:
+
+    if subject is None:
+        return None
+
+    normalized_subject = normalize_text(
+        subject
+    )
+
+    # -----------------------------------------------------
+    # 1. Direct Data/Source folder match
+    # -----------------------------------------------------
+
+    for keyword in available_keywords:
+
+        if (
+            normalize_text(keyword)
+            == normalized_subject
+        ):
+            return keyword
+
+    # -----------------------------------------------------
+    # 2. Asset profile alias match
+    # -----------------------------------------------------
+
+    for keyword, profile in profiles.items():
+
+        # Profile exists but there is no local data.
+        if keyword not in available_keywords:
+            continue
+
+        aliases = profile.get(
+            "aliases",
+            []
+        )
+
+        candidates = [
+            keyword,
+            *aliases
+        ]
+
+        for candidate in candidates:
+
+            if (
+                normalize_text(candidate)
+                == normalized_subject
+            ):
+                return keyword
+
+    # -----------------------------------------------------
+    # Unsupported subject
+    # -----------------------------------------------------
+
+    return None
+
+
+# =========================================================
+# RAW CONTEXT VALIDATION
+# =========================================================
+
+def validate_raw_context(
+    parsed: dict
+) -> dict:
+
+    if not isinstance(
+        parsed,
+        dict
+    ):
+        raise ValueError(
+            "LLM response JSON object olmalı."
+        )
+
+    # -----------------------------------------------------
+    # SUBJECT
+    # -----------------------------------------------------
+
+    subject = parsed.get(
+        "subject"
+    )
+
+    if (
+        subject is not None
+        and not isinstance(subject, str)
+    ):
+        raise ValueError(
+            "subject string veya null olmalı."
+        )
+
+    if isinstance(
+        subject,
+        str
+    ):
+        subject = subject.strip()
+
+        if not subject:
+            subject = None
+
+    # -----------------------------------------------------
+    # INTENTS
+    # -----------------------------------------------------
+
+    intents = parsed.get(
+        "intents",
+        []
+    )
+
+    if not isinstance(
+        intents,
+        list
+    ):
+        raise ValueError(
+            "intents list olmalı."
+        )
+
+    cleaned_intents = []
+
+    for intent in intents:
+
+        if not isinstance(
+            intent,
+            str
+        ):
+            raise ValueError(
+                "Her intent string olmalı."
+            )
+
+        intent = intent.strip().lower()
+
+        if intent not in ALLOWED_INTENTS:
+            raise ValueError(
+                f"Unknown intent: {intent}"
+            )
+
+        if intent not in cleaned_intents:
+            cleaned_intents.append(
+                intent
+            )
+
+    # -----------------------------------------------------
+    # TIME
+    # -----------------------------------------------------
+
+    time_context = parsed.get(
+        "time",
+        []
+    )
+
+    if not isinstance(
+        time_context,
+        list
+    ):
+        raise ValueError(
+            "time list olmalı."
+        )
+
+    for item in time_context:
+
+        if not isinstance(
+            item,
+            dict
+        ):
+            raise ValueError(
+                "time içindeki her eleman "
+                "object olmalı."
+            )
+
+    # -----------------------------------------------------
+    # FOCUS
+    # -----------------------------------------------------
+
+    focus = parsed.get(
+        "focus",
+        []
+    )
+
+    if not isinstance(
+        focus,
+        list
+    ):
+        raise ValueError(
+            "focus list olmalı."
+        )
+
+    cleaned_focus = []
+
+    for item in focus:
+
+        if not isinstance(
+            item,
+            str
+        ):
+            raise ValueError(
+                "focus içindeki her değer "
+                "string olmalı."
+            )
+
+        item = item.strip().lower()
+
+        if item and item not in cleaned_focus:
+            cleaned_focus.append(
+                item
+            )
+
+    # -----------------------------------------------------
+    # COMPARISON
+    # -----------------------------------------------------
+
+    comparison = parsed.get(
+        "comparison"
+    )
+
+    if (
+        comparison is not None
+        and not isinstance(comparison, str)
+    ):
+        raise ValueError(
+            "comparison string veya null olmalı."
+        )
+
+    if isinstance(
+        comparison,
+        str
+    ):
+        comparison = comparison.strip()
+
+        if not comparison:
+            comparison = None
+
+    return {
+        "subject": subject,
+        "intents": cleaned_intents,
+        "time": time_context,
+        "focus": cleaned_focus,
+        "comparison": comparison
+    }
+
+
+# =========================================================
+# RAW LLM PARSER
+# =========================================================
+
+def parse_raw_context(
     user_text: str
 ) -> dict:
 
-    keywords = get_available_keywords()
-
-    system_prompt = load_context_prompt(
-        keywords
-    )
+    system_prompt = load_context_prompt()
 
     response = client.responses.create(
         model=MODEL,
@@ -196,21 +446,176 @@ def parse_input(
             f"{content}"
         )
 
-    # =====================================================
-    # BASIC VALIDATION
-    # =====================================================
-
-    keyword = parsed.get(
-        "keyword"
+    return validate_raw_context(
+        parsed
     )
 
-    if keyword not in keywords:
 
-        raise ValueError(
-            f"Unknown keyword: {keyword}"
+# =========================================================
+# CONTEXT ENRICHMENT
+# =========================================================
+
+def enrich_context(
+    raw_context: dict
+) -> dict:
+
+    available_keywords = (
+        get_available_keywords()
+    )
+
+    profiles = (
+        load_asset_profiles()
+    )
+
+    subject = raw_context[
+        "subject"
+    ]
+
+    keyword = resolve_keyword(
+        subject=subject,
+        available_keywords=available_keywords,
+        profiles=profiles
+    )
+
+    asset_type = None
+    analysis_dimensions = []
+
+    if keyword is not None:
+
+        profile = profiles.get(
+            keyword,
+            {}
         )
 
-    return parsed
+        asset_type = profile.get(
+            "asset_type"
+        )
+
+        analysis_dimensions = profile.get(
+            "analysis_dimensions",
+            []
+        )
+
+    return {
+        "subject": subject,
+        "keyword": keyword,
+        "asset_type": asset_type,
+        "intents": raw_context["intents"],
+        "time": raw_context["time"],
+        "focus": raw_context["focus"],
+        "analysis_dimensions": analysis_dimensions,
+        "comparison": raw_context["comparison"]
+    }
+
+
+# =========================================================
+# PUBLIC PARSER
+# =========================================================
+
+def parse_input(
+    user_text: str
+) -> dict:
+
+    raw_context = parse_raw_context(
+        user_text
+    )
+
+    final_context = enrich_context(
+        raw_context
+    )
+
+    return final_context
+
+
+# =========================================================
+# TEST QUESTION LOADER
+# =========================================================
+
+def load_test_questions() -> list[str]:
+
+    if not QUESTION_FILE.exists():
+        raise FileNotFoundError(
+            f"Question file bulunamadı: "
+            f"{QUESTION_FILE}"
+        )
+
+    content = QUESTION_FILE.read_text(
+        encoding="utf-8"
+    )
+
+    try:
+
+        tree = ast.parse(
+            content
+        )
+
+    except SyntaxError as e:
+
+        raise ValueError(
+            "question_input_parser.txt "
+            "valid Python syntax değil.\n"
+            f"{e}"
+        )
+
+    for node in tree.body:
+
+        if not isinstance(
+            node,
+            ast.Assign
+        ):
+            continue
+
+        for target in node.targets:
+
+            if (
+                isinstance(target, ast.Name)
+                and target.id == "questions"
+            ):
+
+                questions = ast.literal_eval(
+                    node.value
+                )
+
+                if not isinstance(
+                    questions,
+                    list
+                ):
+                    raise ValueError(
+                        "questions bir list olmalı."
+                    )
+
+                if not all(
+                    isinstance(question, str)
+                    for question in questions
+                ):
+                    raise ValueError(
+                        "questions içindeki tüm "
+                        "elemanlar string olmalı."
+                    )
+
+                return questions
+
+    raise ValueError(
+        "question_input_parser.txt içinde "
+        "questions listesi bulunamadı."
+    )
+
+
+# =========================================================
+# RESOLUTION STATUS
+# =========================================================
+
+def get_resolution_status(
+    context: dict
+) -> str:
+
+    if context["subject"] is None:
+        return "MISSING_SUBJECT"
+
+    if context["keyword"] is None:
+        return "UNSUPPORTED"
+
+    return "SUPPORTED"
 
 
 # =========================================================
@@ -221,30 +626,21 @@ if __name__ == "__main__":
 
     questions = load_test_questions()
 
-    output_file = (
-        CONTEXT_DIR
-        / "test_results_input_parser.txt"
-    )
-
     results = []
 
     success_count = 0
     error_count = 0
 
-    print()
-    print("=" * 80)
-    print("CONTEXT PARSER TEST STARTED")
-    print("=" * 80)
-
-    print(
-        f"Total questions: {len(questions)}"
-    )
+    supported_count = 0
+    unsupported_count = 0
+    missing_subject_count = 0
 
     print()
-
-    # =====================================================
-    # RUN TESTS
-    # =====================================================
+    print("=" * 80)
+    print("CONTEXT PARSER V2 TEST STARTED")
+    print("=" * 80)
+    print(f"Total questions: {len(questions)}")
+    print()
 
     for index, question in enumerate(
         questions,
@@ -262,11 +658,27 @@ if __name__ == "__main__":
                 question
             )
 
+            resolution = (
+                get_resolution_status(
+                    parsed
+                )
+            )
+
+            if resolution == "SUPPORTED":
+                supported_count += 1
+
+            elif resolution == "UNSUPPORTED":
+                unsupported_count += 1
+
+            elif resolution == "MISSING_SUBJECT":
+                missing_subject_count += 1
+
             results.append(
                 {
                     "test_number": index,
                     "question": question,
                     "status": "SUCCESS",
+                    "resolution": resolution,
                     "context": parsed
                 }
             )
@@ -287,55 +699,59 @@ if __name__ == "__main__":
 
             error_count += 1
 
-
     # =====================================================
-    # WRITE TEST RESULTS
+    # WRITE RESULTS
     # =====================================================
 
-    with output_file.open(
+    with TEST_RESULT_FILE.open(
         "w",
         encoding="utf-8"
     ) as file:
 
         file.write(
-            "=" * 80
-            + "\n"
+            "=" * 80 + "\n"
         )
 
         file.write(
-            "CONTEXT PARSER TEST RESULTS\n"
+            "CONTEXT PARSER V2 TEST RESULTS\n"
         )
 
         file.write(
-            "=" * 80
-            + "\n\n"
+            "=" * 80 + "\n\n"
         )
 
         file.write(
-            f"TOTAL TESTS   : {len(questions)}\n"
+            f"TOTAL TESTS      : {len(questions)}\n"
         )
 
         file.write(
-            f"SUCCESS       : {success_count}\n"
+            f"SUCCESS          : {success_count}\n"
         )
 
         file.write(
-            f"ERROR         : {error_count}\n"
+            f"ERROR            : {error_count}\n"
+        )
+
+        file.write(
+            f"SUPPORTED        : {supported_count}\n"
+        )
+
+        file.write(
+            f"UNSUPPORTED      : {unsupported_count}\n"
+        )
+
+        file.write(
+            f"MISSING SUBJECT  : {missing_subject_count}\n"
         )
 
         file.write(
             "\n"
         )
 
-        # =================================================
-        # INDIVIDUAL RESULTS
-        # =================================================
-
         for result in results:
 
             file.write(
-                "=" * 80
-                + "\n"
+                "=" * 80 + "\n"
             )
 
             file.write(
@@ -343,8 +759,7 @@ if __name__ == "__main__":
             )
 
             file.write(
-                "=" * 80
-                + "\n\n"
+                "=" * 80 + "\n\n"
             )
 
             file.write(
@@ -365,14 +780,19 @@ if __name__ == "__main__":
                 + "\n\n"
             )
 
-            # =============================================
-            # SUCCESS
-            # =============================================
-
             if (
                 result["status"]
                 == "SUCCESS"
             ):
+
+                file.write(
+                    "RESOLUTION:\n"
+                )
+
+                file.write(
+                    result["resolution"]
+                    + "\n\n"
+                )
 
                 file.write(
                     "PARSED CONTEXT:\n"
@@ -389,10 +809,6 @@ if __name__ == "__main__":
                 file.write(
                     "\n\n"
                 )
-
-            # =============================================
-            # ERROR
-            # =============================================
 
             else:
 
@@ -414,14 +830,8 @@ if __name__ == "__main__":
                     + "\n\n"
                 )
 
-
-        # =================================================
-        # SUMMARY
-        # =================================================
-
         file.write(
-            "=" * 80
-            + "\n"
+            "=" * 80 + "\n"
         )
 
         file.write(
@@ -429,22 +839,32 @@ if __name__ == "__main__":
         )
 
         file.write(
-            "=" * 80
-            + "\n\n"
+            "=" * 80 + "\n\n"
         )
 
         file.write(
-            f"TOTAL TESTS : {len(questions)}\n"
+            f"TOTAL TESTS      : {len(questions)}\n"
         )
 
         file.write(
-            f"SUCCESS     : {success_count}\n"
+            f"SUCCESS          : {success_count}\n"
         )
 
         file.write(
-            f"ERROR       : {error_count}\n"
+            f"ERROR            : {error_count}\n"
         )
 
+        file.write(
+            f"SUPPORTED        : {supported_count}\n"
+        )
+
+        file.write(
+            f"UNSUPPORTED      : {unsupported_count}\n"
+        )
+
+        file.write(
+            f"MISSING SUBJECT  : {missing_subject_count}\n"
+        )
 
     # =====================================================
     # TERMINAL SUMMARY
@@ -456,17 +876,29 @@ if __name__ == "__main__":
     print("=" * 80)
 
     print(
-        f"Total   : {len(questions)}"
+        f"Total           : {len(questions)}"
     )
 
     print(
-        f"Success : {success_count}"
+        f"Success         : {success_count}"
     )
 
     print(
-        f"Error   : {error_count}"
+        f"Error           : {error_count}"
     )
 
     print(
-        f"Output  : {output_file}"
+        f"Supported       : {supported_count}"
+    )
+
+    print(
+        f"Unsupported     : {unsupported_count}"
+    )
+
+    print(
+        f"Missing subject : {missing_subject_count}"
+    )
+
+    print(
+        f"Output          : {TEST_RESULT_FILE}"
     )

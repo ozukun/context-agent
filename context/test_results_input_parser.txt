@@ -5,8 +5,8 @@ CONTEXT PARSER V2 TEST RESULTS
 TOTAL TESTS      : 50
 SUCCESS          : 50
 ERROR            : 0
-SUPPORTED        : 44
-UNSUPPORTED      : 4
+SUPPORTED        : 45
+UNSUPPORTED      : 3
 MISSING SUBJECT  : 2
 
 ================================================================================
@@ -24,7 +24,7 @@ SUPPORTED
 
 PARSED CONTEXT:
 {
-  "subject": "gold",
+  "subject": "Gold",
   "keyword": "gold",
   "asset_type": "commodity",
   "intents": [],
@@ -125,9 +125,7 @@ PARSED CONTEXT:
       "value": 3
     }
   ],
-  "focus": [
-    "prices"
-  ],
+  "focus": [],
   "analysis_dimensions": [
     "interest_rates",
     "real_rates",
@@ -201,7 +199,7 @@ SUPPORTED
 
 PARSED CONTEXT:
 {
-  "subject": "Gold",
+  "subject": "gold",
   "keyword": "gold",
   "asset_type": "commodity",
   "intents": [
@@ -245,7 +243,7 @@ SUPPORTED
 
 PARSED CONTEXT:
 {
-  "subject": "Gold",
+  "subject": "gold",
   "keyword": "gold",
   "asset_type": "commodity",
   "intents": [
@@ -569,7 +567,8 @@ PARSED CONTEXT:
   "keyword": "gold",
   "asset_type": "commodity",
   "intents": [
-    "impact"
+    "impact",
+    "scenario"
   ],
   "time": [
     {
@@ -833,7 +832,7 @@ SUPPORTED
 
 PARSED CONTEXT:
 {
-  "subject": "Nvidia",
+  "subject": "NVIDIA",
   "keyword": "nvidia",
   "asset_type": "equity",
   "intents": [
@@ -1147,7 +1146,7 @@ SUPPORTED
 
 PARSED CONTEXT:
 {
-  "subject": "crude oil",
+  "subject": "oil",
   "keyword": "oil",
   "asset_type": "commodity",
   "intents": [
@@ -1186,13 +1185,13 @@ STATUS:
 SUCCESS
 
 RESOLUTION:
-UNSUPPORTED
+SUPPORTED
 
 PARSED CONTEXT:
 {
-  "subject": "crude oil prices",
-  "keyword": null,
-  "asset_type": null,
+  "subject": "oil prices",
+  "keyword": "oil",
+  "asset_type": "commodity",
   "intents": [
     "drivers"
   ],
@@ -1205,7 +1204,16 @@ PARSED CONTEXT:
     }
   ],
   "focus": [],
-  "analysis_dimensions": [],
+  "analysis_dimensions": [
+    "supply",
+    "demand",
+    "opec",
+    "inventories",
+    "spare_capacity",
+    "geopolitics",
+    "shipping",
+    "refining"
+  ],
   "comparison": null
 }
 
@@ -1269,13 +1277,12 @@ SUPPORTED
 
 PARSED CONTEXT:
 {
-  "subject": "crude oil",
+  "subject": "crude oil prices",
   "keyword": "oil",
   "asset_type": "commodity",
   "intents": [
     "scenario",
-    "outlook",
-    "impact"
+    "outlook"
   ],
   "time": [
     {
@@ -1286,8 +1293,8 @@ PARSED CONTEXT:
     }
   ],
   "focus": [
-    "opec supply reductions",
-    "chinese demand improvement"
+    "opec supply",
+    "chinese demand"
   ],
   "analysis_dimensions": [
     "supply",
@@ -1321,7 +1328,8 @@ PARSED CONTEXT:
   "keyword": "interest_rates",
   "asset_type": "macro",
   "intents": [
-    "risk"
+    "risk",
+    "impact"
   ],
   "time": [
     {
@@ -1366,8 +1374,7 @@ PARSED CONTEXT:
   "keyword": "interest_rates",
   "asset_type": "macro",
   "intents": [
-    "outlook",
-    "trend"
+    "outlook"
   ],
   "time": [
     {
@@ -1458,7 +1465,8 @@ PARSED CONTEXT:
   "asset_type": "macro",
   "intents": [
     "scenario",
-    "outlook"
+    "outlook",
+    "trend"
   ],
   "time": [
     {
@@ -1630,7 +1638,7 @@ UNSUPPORTED
 
 PARSED CONTEXT:
 {
-  "subject": "Federal Reserve interest rates",
+  "subject": "Federal funds rate",
   "keyword": null,
   "asset_type": null,
   "intents": [
@@ -1795,7 +1803,7 @@ SUPPORTED
 
 PARSED CONTEXT:
 {
-  "subject": "altın",
+  "subject": "gold",
   "keyword": "gold",
   "asset_type": "commodity",
   "intents": [
@@ -1892,12 +1900,7 @@ PARSED CONTEXT:
   "intents": [
     "status"
   ],
-  "time": [
-    {
-      "type": "qualitative",
-      "value": "short_term"
-    }
-  ],
+  "time": [],
   "focus": [],
   "analysis_dimensions": [
     "interest_rates",
@@ -2155,9 +2158,7 @@ PARSED CONTEXT:
   "subject": "gold",
   "keyword": "gold",
   "asset_type": "commodity",
-  "intents": [
-    "trend"
-  ],
+  "intents": [],
   "time": [
     {
       "type": "absolute",
@@ -2187,6 +2188,6 @@ SUMMARY
 TOTAL TESTS      : 50
 SUCCESS          : 50
 ERROR            : 0
-SUPPORTED        : 44
-UNSUPPORTED      : 4
+SUPPORTED        : 45
+UNSUPPORTED      : 3
 MISSING SUBJECT  : 2

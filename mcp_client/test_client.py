@@ -30,7 +30,7 @@ async def main():
 
         result = await client.call_tool(
             "search_asset",
-            {"query": "wti"}
+            {"query": "bitcoin"}
         )
 
         print("RESULT:")

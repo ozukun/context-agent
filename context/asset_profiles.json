@@ -10,6 +10,12 @@
       "altin",
       "altın"
     ],
+    "semantic_terms": [
+      "precious metal",
+      "yellow precious metal",
+      "safe haven asset",
+      "monetary metal"
+    ],
     "asset_type": "commodity",
     "analysis_dimensions": [
       "interest_rates",
@@ -30,6 +36,13 @@
       "btc",
       "xbt"
     ],
+    "semantic_terms": [
+      "digital currency",
+      "cryptocurrency",
+      "crypto asset",
+      "digital asset",
+      "decentralized currency"
+    ],
     "asset_type": "crypto",
     "analysis_dimensions": [
       "institutional_adoption",
@@ -49,6 +62,14 @@
       "nvda",
       "nvidia stock"
     ],
+    "semantic_terms": [
+      "chip maker",
+      "gpu maker",
+      "ai chip company",
+      "semiconductor company",
+      "ai semiconductor company",
+      "data center gpu company"
+    ],
     "asset_type": "equity",
     "analysis_dimensions": [
       "ai_demand",
@@ -63,6 +84,95 @@
     ]
   },
 
+  "amd": {
+    "aliases": [
+      "amd",
+      "advanced micro devices",
+      "amd stock"
+    ],
+    "semantic_terms": [
+      "chip maker",
+      "cpu maker",
+      "gpu maker",
+      "semiconductor company",
+      "processor company",
+      "data center chip company"
+    ],
+    "asset_type": "equity",
+    "analysis_dimensions": [
+      "ai_demand",
+      "cpu_demand",
+      "gpu_demand",
+      "data_center",
+      "client_computing",
+      "gaming",
+      "revenue_growth",
+      "earnings",
+      "margins",
+      "valuation",
+      "competition"
+    ]
+  },
+
+  "intel": {
+    "aliases": [
+      "intel",
+      "intc",
+      "intel stock"
+    ],
+    "semantic_terms": [
+      "chip maker",
+      "cpu maker",
+      "semiconductor company",
+      "semiconductor manufacturer",
+      "processor company",
+      "chip foundry"
+    ],
+    "asset_type": "equity",
+    "analysis_dimensions": [
+      "cpu_demand",
+      "data_center",
+      "pc_demand",
+      "foundry",
+      "process_technology",
+      "manufacturing",
+      "capex",
+      "earnings",
+      "margins",
+      "valuation",
+      "competition"
+    ]
+  },
+
+  "asml": {
+    "aliases": [
+      "asml",
+      "asml holding",
+      "asml stock"
+    ],
+    "semantic_terms": [
+      "semiconductor equipment company",
+      "chip equipment company",
+      "lithography company",
+      "euv machine maker",
+      "euv lithography company",
+      "chipmaking equipment company"
+    ],
+    "asset_type": "equity",
+    "analysis_dimensions": [
+      "euv_demand",
+      "lithography_demand",
+      "semiconductor_capex",
+      "order_backlog",
+      "export_controls",
+      "china_exposure",
+      "customer_demand",
+      "supply_chain",
+      "margins",
+      "valuation"
+    ]
+  },
+
   "oil": {
     "aliases": [
       "oil",
@@ -74,6 +184,12 @@
       "crude oil prices",
       "wti",
       "brent"
+    ],
+    "semantic_terms": [
+      "american crude",
+      "energy commodity",
+      "petroleum",
+      "crude petroleum"
     ],
     "asset_type": "commodity",
     "analysis_dimensions": [
@@ -98,6 +214,13 @@
       "policy rates",
       "faiz",
       "faizler"
+    ],
+    "semantic_terms": [
+      "borrowing costs",
+      "cost of money",
+      "central bank rates",
+      "monetary policy rates",
+      "policy interest rate"
     ],
     "asset_type": "macro",
     "analysis_dimensions": [

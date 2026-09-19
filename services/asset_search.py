@@ -122,7 +122,8 @@ if __name__ == "__main__":
         "yellow precious metal",
         "digital currency",
         "chip maker",
-        "banana"
+        "banana",
+        "gold"
     ]
 
     for test in tests:

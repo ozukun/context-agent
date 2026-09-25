@@ -10,9 +10,11 @@ ASSET_PROFILE_PATH = (
     / "asset_profiles.json"
 )
 
-VECTOR_DISTANCE_THRESHOLD = 1.15
-VECTOR_TOP_K = 3
 
+
+VECTOR_DISTANCE_THRESHOLD = 1.15
+VECTOR_DISTANCE_MARGIN = 0.20
+VECTOR_TOP_K = 3
 
 def load_asset_profiles() -> dict:
 
@@ -67,25 +69,34 @@ def search_asset(query: str) -> dict:
         top_k=VECTOR_TOP_K
     )
 
-    # ------------------------------------------------
-    # 3. Threshold filtering
-    # ------------------------------------------------
+# ------------------------------------------------
+# 3. Threshold + best distance filtering
+# ------------------------------------------------
 
     candidates = []
 
-    for result in vector_results:
+    if vector_results:
 
-        if result["distance"] <= VECTOR_DISTANCE_THRESHOLD:
+        best_distance = vector_results[0]["distance"]
 
-            canonical_asset = result["canonical_asset"]
+        for result in vector_results:
 
-            profile = profiles[canonical_asset]
+            distance = result["distance"]
 
-            candidates.append({
-                "asset": canonical_asset,
-                "asset_type": profile.get("asset_type"),
-                "distance": result["distance"]
-            })
+            if (
+                distance <= VECTOR_DISTANCE_THRESHOLD
+                and distance <= best_distance + VECTOR_DISTANCE_MARGIN
+            ):
+
+                canonical_asset = result["canonical_asset"]
+
+                profile = profiles[canonical_asset]
+
+                candidates.append({
+                    "asset": canonical_asset,
+                    "asset_type": profile.get("asset_type"),
+                    "distance": distance
+                })
 
     # ------------------------------------------------
     # 4. No valid candidate

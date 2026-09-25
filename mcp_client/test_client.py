@@ -21,20 +21,24 @@ async def main():
 
     async with client:
 
-        tools = await client.list_tools()
+        queries = [
+            "gold",
+            "american crude",
+            "digital currency",
+            "chip maker",
+            "banana"
+        ]
 
-        for tool in tools:
-            print(tool.name)
-            print(tool.description)
-            print(tool.input_schema)
+        for query in queries:
 
-        result = await client.call_tool(
-            "search_asset",
-            {"query": "bitcoin"}
-        )
+            result = await client.call_tool(
+                "search_asset",
+                {"query": query}
+            )
 
-        print("RESULT:")
-        print(result.data)
+            print()
+            print("QUERY:", query)
+            print(result.data)
 
 
 if __name__ == "__main__":

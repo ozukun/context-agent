@@ -170,11 +170,20 @@ async def main():
 
         def step2(state_x: AssetAgentState):
 
-            print("step2 is running")
-            print(result.data.get("candidates", []))
-            return {
-                "result_count": state_x.result_count
-            }
+            print("Select an asset:")
+
+            candidates = result.data.get("candidates", [])
+
+            for candidate in candidates:
+                print(candidate["asset"])
+
+            selected_asset = input(
+                "Enter asset: "
+            )
+
+            print("Selected asset:", selected_asset)
+
+            return {}
 
         def step3(state_x: AssetAgentState):
 
@@ -186,26 +195,27 @@ async def main():
 
         def decide_next_step(state):
 
-            if state.result_count  > 1:
-                return "step2"
+            if state.result_count > 1:
+                return "select_asset"
 
-            return "step3"
+            return "continue"
 
         g1.add_node("step1", step1)
-        g1.add_node("step2", step2)
-        g1.add_node("step3", step3)
+        g1.add_node("select_asset", step2)
+        g1.add_node("continue", step3)
+   
         
         g1.set_entry_point("step1")
-        g1.add_edge("step2", END)
-        g1.add_edge("step3", END)
+        g1.add_edge("select_asset", END)
+        g1.add_edge("continue", END)
 
         g1.add_conditional_edges\
         (
             "step1",
             decide_next_step,
             {
-                "step2": "step2",
-                "step3": "step3"
+                "select_asset": "select_asset",
+                "continue": "continue"
             }
         )
 

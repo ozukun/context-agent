@@ -92,7 +92,7 @@ async def main():
 
             If found=false, explain that the asset could not be resolved.
             """,
-            input="Tell me about chip maker", #"Tell me about chip maker", 'XAU prices'
+            input="XAU prices", #"Tell me about chip maker", 'XAU prices'
             tools=openai_tools
         )
 
@@ -153,12 +153,20 @@ async def main():
 
         class AssetAgentState(BaseModel):
             result_count: int
+            selected_asset: str | list[dict]  |None= None
 
         # LANGGRAPH involved
 
         from langgraph.graph import StateGraph, END
-        
-        state1 = AssetAgentState(result_count=len(result.data.get("candidates", [])))
+
+
+        if "candidates" not in result.data:
+            state1 = AssetAgentState(result_count=len([(result.data.get("asset", []))]) , selected_asset=result.data.get("asset", None))
+        else:
+            state1 = AssetAgentState(result_count=len(result.data.get("candidates", [])) , selected_asset=result.data.get("candidates", None))
+
+        print("Initial state:", result.data) 
+        result_count_x = state1.result_count   
 
         g1 = StateGraph(state_schema=AssetAgentState)
 
@@ -183,14 +191,17 @@ async def main():
 
             print("Selected asset:", selected_asset)
 
-            return {}
+            return {
+                "result_count": 1,
+                "selected_asset": selected_asset
+            }
 
         def step3(state_x: AssetAgentState):
 
             print("step3 is running")
 
             return {
-                "result_count": -1
+                "result_count": result_count_x
             }
 
         def decide_next_step(state):

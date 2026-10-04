@@ -2,3 +2,5 @@
 __pycache__/
 *.pyc
 chroma_db/
+z_agents_dummy/
+z_code_dummy_checks/
